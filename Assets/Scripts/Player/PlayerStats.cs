@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     bool canUpdateMoney(float amount) {
-        return amount <= currentMoney;
+        return currentMoney + amount >= 0;
     }
 
     public bool UpdateMoney(float amount) {

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
 
@@ -7,30 +6,10 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] int maxStackCount = 99;
     [SerializeField] SlotUI[] slots;
     [SerializeField] Transform slotsParent;
-
-    [SerializeField] Ore testOre;
-
-    public Ore ore;
     
     void Awake() {
         LoadAllSlotsAtAwake();
     }
-
-    void Start() {
-        StartCoroutine(test());
-    }
-
-    IEnumerator test() {
-        AddOreInInventory(testOre, 5);
-        yield return new WaitForSeconds(2f);
-
-        RemoveOreInInventory(testOre, 2);
-        yield return new WaitForSeconds(2f);
-
-        AddOreInInventory(ore, 150);
-        yield return new WaitForSeconds(2f);
-    }
-
 
     public void LoadAllSlotsAtAwake() {
         slots = new SlotUI[slotsParent.childCount];
@@ -55,22 +34,19 @@ public class InventoryManager : MonoBehaviour {
         for (int i = 0; i < slots.Length; i++) {
 
             SlotStack slotStack = slots[i].GetCurrentSlotStack();
-            Debug.Log("mo");
 
             //if the ore in the slot is the good one
             if(slotStack.item == oreToChose) {
                 //if there are enough ore in the slot
                 if(slots[i].UpdateOreAmount(-oreNeedToBeRemoved)) {
                     result.currentStackCount += oreNeedToBeRemoved;
-                    Debug.Log("finish" + slots[i]);
                     break;
                 }
                 else { //if we need to get the ore in little amount
-                    int difference = oreNeedToBeRemoved - slotStack.currentStackCount;
+                    oreNeedToBeRemoved -= slotStack.currentStackCount;
 
-                    if(slots[i].UpdateOreAmount(-difference)) {
-                        result.currentStackCount += difference;
-                        oreNeedToBeRemoved -= difference;
+                    if(slots[i].UpdateOreAmount(-slotStack.currentStackCount)) {
+                        result.currentStackCount += slotStack.currentStackCount;
                     }
                 }
             }
@@ -90,13 +66,15 @@ public class InventoryManager : MonoBehaviour {
             if(slotStack.item == newOre && slotStack.currentStackCount < maxStackCount) {
                 //check if all the ore can fit in the slot
                 if(slotStack.currentStackCount + amount <= maxStackCount) {
-                    slotStack.currentStackCount += amount;
+                    slots[i].UpdateOreAmount(amount);
+                    Debug.Log("test");
                     return;
                 }
                 else {
                     //if the slot is too small to get all the ore in one slot
                     int slotSizeDifference = slotStack.currentStackCount + amount - maxStackCount;
-                    slotStack.currentStackCount += amount - slotSizeDifference;
+                    slots[i].UpdateOreAmount(amount - slotSizeDifference);
+                    Debug.Log("gve");
 
                     AddOreInInventory(newOre, slotSizeDifference);
                     return;
@@ -110,7 +88,14 @@ public class InventoryManager : MonoBehaviour {
 
             //an empty slot
             if(slotStack.item == null) {
-                slots[i].LoadItem(ore, amount);
+
+                if(amount > maxStackCount) {
+                    slots[i].LoadItem(newOre, maxStackCount);
+                    AddOreInInventory(newOre, amount - maxStackCount);
+                }
+                else
+                    slots[i].LoadItem(newOre, amount);
+
                 return;
             }
         }

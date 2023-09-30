@@ -37,13 +37,15 @@ public class SlotUI : MonoBehaviour {
     }
 
     bool CanUpdateAmount(int amount) {
-        return currentSlotStack.currentStackCount >= amount;
+        return currentSlotStack.currentStackCount + amount >= 0;
     }
 
     public bool UpdateOreAmount(int amount) {
         if(!CanUpdateAmount(amount)) return false;
 
         currentSlotStack.currentStackCount += amount;
+
+        slotNumberText.text = currentSlotStack.currentStackCount.ToString("0");
 
         if(currentSlotStack.currentStackCount == 0)
             LoadItem(null, 0);
