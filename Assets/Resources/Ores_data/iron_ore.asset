@@ -15,5 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 0}
   icon: {fileID: 21300000, guid: 4f5364a9fe7e04741862d2af49136835, type: 3}
   name: Iron
+  hardness: 10
   rarity: 100
   price: 10
