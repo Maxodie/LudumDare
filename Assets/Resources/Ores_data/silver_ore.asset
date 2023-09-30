@@ -17,7 +17,7 @@ MonoBehaviour:
   sprites: []
   name: Silver
   hardness: 20
-  rarityWeight: 10
+  rarityWeight: 8
   price: 20
   depthMin: 20
   depthMax: 70

@@ -17,7 +17,7 @@ MonoBehaviour:
   sprites: []
   name: Gold
   hardness: 30
-  rarityWeight: 5
+  rarityWeight: 6
   price: 30
   depthMin: 60
   depthMax: 110
