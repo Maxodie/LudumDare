@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour {
     [SerializeField] int miningpowerBaseStat = 1;
     public CharacterStat miningpower;
 
-    [SerializeField] float currenMoney = 0f;
+    [SerializeField] float currentMoney = 0f;
 
     public int depth = 0;
 
@@ -31,13 +31,13 @@ public class PlayerStats : MonoBehaviour {
     }
 
     bool canUpdateMoney(float amount) {
-        return amount <= currenMoney;
+        return amount <= currentMoney;
     }
 
     public bool UpdateMoney(float amount) {
         if(!canUpdateMoney(amount)) return false;
 
-        currenMoney += amount;
+        currentMoney += amount;
         return true;
     }
 }
