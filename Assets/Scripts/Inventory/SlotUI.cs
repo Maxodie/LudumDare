@@ -11,13 +11,25 @@ public class SlotUI : MonoBehaviour {
 
     void Awake() {
         currentSlotStack = new SlotStack();
+
+        LoadItem(null, 0);
     }
 
-    public void LoadItem(SlotStack slotStack) {
-        currentSlotStack = slotStack;
+    public void LoadItem(Ore ore, int amount) {
+        currentSlotStack.item = ore;
 
-        slotIcon.sprite = slotStack.item.icon;
-        slotNumberText.text = slotStack.currentStackCount.ToString("0");
+        if(ore) {
+            currentSlotStack.currentStackCount = amount;
+            slotIcon.sprite = currentSlotStack.item.icon;
+            slotIcon.color = Color.white;
+        }
+        else {
+            slotIcon.sprite = null;
+            currentSlotStack.currentStackCount = 0;
+            slotIcon.color = new Color(0, 0, 0, 0);
+        }
+
+        slotNumberText.text = currentSlotStack.currentStackCount.ToString("0");
     }
 
     public ref SlotStack GetCurrentSlotStack() {
@@ -34,7 +46,7 @@ public class SlotUI : MonoBehaviour {
         currentSlotStack.currentStackCount += amount;
 
         if(currentSlotStack.currentStackCount == 0)
-            currentSlotStack.item = null;
+            LoadItem(null, 0);
 
         return true;
     }

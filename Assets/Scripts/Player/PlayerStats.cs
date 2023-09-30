@@ -15,6 +15,8 @@ public class PlayerStats : MonoBehaviour {
 
     [SerializeField] float currenMoney = 0f;
 
+    public int depth = 0;
+
     void Awake() {
         if(!instance) instance = this;
         else Destroy(gameObject);
