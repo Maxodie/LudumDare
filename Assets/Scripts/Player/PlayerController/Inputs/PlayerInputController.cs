@@ -5,14 +5,15 @@ public class PlayerInputController : MonoBehaviour
 {
     PlayerInputs playerInputs;
 
-
-    private void Awake()
+    private void OnEnable()
     {
         playerInputs = new PlayerInputs();
+        playerInputs.Player.Enable();
 
         playerInputs.Player.Mining.started += StartMining;
         playerInputs.Player.Mining.canceled += StopMining;
     }
+
 
     public void StartMining(InputAction.CallbackContext context)
     {

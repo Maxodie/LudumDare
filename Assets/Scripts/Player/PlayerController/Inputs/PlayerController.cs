@@ -8,10 +8,13 @@ public class PlayerController : MonoBehaviour
     public Transform raycastOrigin;
 
     public bool isMining;
+    public bool iscurrentlymining;
 
-    public RaycastHit2D targetedObject;
+    public GameObject targetedObject;
 
     float spaceBarTimer;
+
+    MiningState miningState;
 
     private void Awake()
     {
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     public void ResetSpaceBarTimer()
     {
-        //spaceBarTimer = 
+        spaceBarTimer = PlayerStats.instance.miningMaxTime.value;
     }
 
     private void Update()
@@ -36,22 +39,80 @@ public class PlayerController : MonoBehaviour
             if (spaceBarTimer > 0f)
             {
                 spaceBarTimer -= Time.deltaTime;
-                if (targetedObject.transform != null)
+                if (targetedObject == null)
                 {
-                    targetedObject = Physics2D.Raycast(raycastOrigin.position, transform.forward, 1);
+                    RaycastHit2D hit;
+                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, 0.75f);
+                    if (hit) targetedObject = hit.transform.gameObject;
+                    else
+                    {
+                        transform.position += Vector3.right * 1 * Time.deltaTime;
+                    }
                 }
-                else
+                else if (!iscurrentlymining)
                 {
-                    StartCoroutine(MiningCoroutine(PlayerStats.instance.miningRate.value));
+                    iscurrentlymining = true;
+                    StartCoroutine(MiningCoroutine(targetedObject.transform.GetComponent<ObjectData>().objectData));
                 }
             }
         }
         
     }
 
-    public IEnumerator MiningCoroutine(float timer)
+    public IEnumerator MiningCoroutine(Ore objectData)
     {
-        yield return new WaitForSeconds(timer);
-        Destroy(targetedObject.transform);
+        int blocHardness = objectData.hardness;
+        int numberOfState = objectData.sprites.Length;
+
+        int durabilityBetweenState = blocHardness / numberOfState;
+
+        if (miningState == null)
+        {
+            int currentState = numberOfState - 1;
+
+            int remainingDurability = blocHardness;
+
+            miningState = new MiningState(currentState, remainingDurability);
+        }
+
+        while (miningState.remainingDurability > 0)
+        {
+            Debug.Log(miningState.remainingDurability);
+            if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
+            {
+                targetedObject.transform.GetComponent<SpriteRenderer>().sprite = objectData.sprites[miningState.currentState];
+                miningState.currentState --;
+            }
+
+            miningState.remainingDurability -= (int)PlayerStats.instance.miningpower.value;
+            yield return new WaitForSeconds(PlayerStats.instance.miningRate.value);
+            if (spaceBarTimer < 0f || !isMining)
+            {
+                iscurrentlymining = false;
+                yield break;
+            }
+        }
+        miningState = null;
+        iscurrentlymining = false;
+
+        GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
+
+        Destroy(targetedObject.transform.gameObject);
+        if (blockBelow != null)
+        {
+            targetedObject = blockBelow;
+        }
+    }
+}
+
+public class MiningState
+{
+    public int currentState;
+    public int remainingDurability;
+
+    public MiningState(int currentState, int remainingDurability)
+    {
+        this.currentState = currentState;
+        this.remainingDurability = remainingDurability;
     }
 }
