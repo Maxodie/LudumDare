@@ -17,7 +17,6 @@ public class ShopItemUI : MonoBehaviour {
         icon.sprite = shopItem.itemIcon;
         textTitle.text = shopItem.itemName;
 
-        textDescription.text = shopManager.GetItemDescription(shopItem);
 
     }
 
