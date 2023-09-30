@@ -18,22 +18,19 @@ public class OresGeneration : MonoBehaviour
     {
         /*while (true)
         {
-            yield return new WaitForSeconds(.5f);
-            PlayerStats.instance.depth += 2;
-            Debug.LogWarning("PROFONDEUR : " + PlayerStats.instance.depth);
+            yield return new WaitForSeconds(0.2f);
+            PlayerStats.instance.depth += 1;
 
-            GetRandomOre();
-            /*if (GetRock())
-                Debug.LogWarning("CAILLOUX");
+            if (DrawRock())
+                Debug.Log("Cailloux");
             else
-                GetRandomOre();#1#
-            //Debug.Log(GetRandomOre().name);
+                Debug.Log(GetRandomOre().name);
         }*/
-        yield return null;
+        return null;
     }
 
     // Return true if create rock
-    bool GetRock()
+    bool DrawRock()
     {
         float result = Random.Range(0f, 1f);
         return result <= rockApparitionPercentage;
@@ -41,15 +38,16 @@ public class OresGeneration : MonoBehaviour
 
     Ore GetRandomOre()
     {
-        // IDictionary<oreDataBaseId, rarityweight>
-        IDictionary<int, int> oreRarityWeight = new Dictionary<int, int>();
+        // Get ore rarity weight
+        // IDictionary<oreDataBaseId, rarityWeight>
+        IDictionary<int, int> oreRarityWeightDictionary = new Dictionary<int, int>();
         int totalRarityWeight = 0;
         int playerDepth = PlayerStats.instance.depth;
 
         for (int i = 0; i < oreDataBase.oreList.Length; i++)
         {
             Ore selectedOre = oreDataBase.oreList[i];
-            var temporaryRarityWeight = 0;
+            float temporaryRarityWeight = 0;
             
             if (playerDepth >= selectedOre.depthMin && playerDepth <= selectedOre.depthMax)
             {
@@ -57,72 +55,52 @@ public class OresGeneration : MonoBehaviour
 
                 if (playerDepth == depthMid)
                 {
-                    oreRarityWeight.Add(i, selectedOre.rarityWeight);
+                    oreRarityWeightDictionary.Add(i, selectedOre.rarityWeight);
                     totalRarityWeight += selectedOre.rarityWeight;
+                    continue;
                 }
                 else if (playerDepth < depthMid)
                 {
                     temporaryRarityWeight = selectedOre.rarityWeight *
                                                 ((playerDepth - selectedOre.depthMin) /
-                                                 (depthMid - selectedOre.depthMin));
+                                                 (float)(depthMid - selectedOre.depthMin));
+
+                    if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
                 }
                 else if (playerDepth > depthMid)
                 {
                     temporaryRarityWeight = selectedOre.rarityWeight *
-                                                ((playerDepth - depthMid) /
-                                                 (selectedOre.depthMax - depthMid));
+                                            ((playerDepth - depthMid) /
+                                             (float)(selectedOre.depthMax - depthMid));
+                    
+                    if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
                 }
 
-                temporaryRarityWeight++;
-                Debug.Log(selectedOre.name + " : " + temporaryRarityWeight);
-                oreRarityWeight.Add(i, temporaryRarityWeight);
-                totalRarityWeight += selectedOre.rarityWeight;
+                temporaryRarityWeight = Mathf.Round(temporaryRarityWeight);
+                
+                //Debug.Log(oreDataBase.oreList[i].name + " : " + i);
+
+                oreRarityWeightDictionary.Add(i, (int)temporaryRarityWeight);
+                totalRarityWeight += (int)temporaryRarityWeight;
             }
         }
         
-        Debug.Log("TOTAL WEIGHT : " + totalRarityWeight);
-        return null;
+        return oreDataBase.oreList[drawRandomOreID(oreRarityWeightDictionary, totalRarityWeight)];
     }
 
-    /*Ore GetRandomOre()
+    int drawRandomOreID(IDictionary<int, int> oreDictionary, int totalRarityWeight)
     {
-        List<Ore> availableOres = new List<Ore>();
-        List<int> oreRarityWeights = new List<int>();
-        int totalRarityWeight = 0;
-
-        // Get every ores that can be found at different depths
-        foreach (var selectedOre in oreDataBase.oreList)
-        {
-            if (PlayerStats.instance.depth >= selectedOre.depthMin)
-            {
-                // Adjust rarity weight according to min and max depth
-                var temporaryRarityWeight = selectedOre.rarityWeight;
-                temporaryRarityWeight -= PlayerStats.instance.depth - selectedOre.depthMax;
-
-                if (selectedOre.tempRarityWeight > 0)
-                {
-                    Debug.Log(selectedOre.name + " : " + selectedOre.tempRarityWeight);
-                    oreRarityWeights.Add(selectedOre);
-                    totalRarityWeight += selectedOre.tempRarityWeight;
-                }
-                else 
-                    oreRarityWeights.Add(0);
-            }
-            else
-                oreRarityWeights.Add(0);
-        }
-        
-        List<Ore> oreListWithWeight = new List<Ore>();
-        for (int i = 0; i < availableOres.Count; i++)
-        {
-            for (int j = 0; j < availableOres[i].tempRarityWeight; j++)
-            {
-                oreListWithWeight.Add(availableOres[i]);
-            }
-        }
-        
+        List<int> oreIdArray = new List<int>();
         int randomInt = Random.Range(0, totalRarityWeight);
 
-        return oreListWithWeight[randomInt];
-    }*/
+        foreach (KeyValuePair<int, int> entry in oreDictionary)
+        {
+            for (int i = 0; i < entry.Value; i++)
+            {
+                oreIdArray.Add(entry.Key);
+            }
+        }
+        
+        return oreIdArray[randomInt];
+    }
 }

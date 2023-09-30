@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c2a3c66-8813-476b-bb27-050e85e2a281" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/copper_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/copper_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/gold_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/gold_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/iron_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/iron_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/silver_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/silver_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/Ore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ores/Ore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/OreDataBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/OreDataBase.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/OresGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ores/OresGeneration.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
