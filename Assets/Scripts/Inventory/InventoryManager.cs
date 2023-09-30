@@ -1,18 +1,33 @@
 using UnityEngine;
+using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
 
     //inventory slots
     [SerializeField] int maxStackCount = 99;
-    SlotUI[] slots;
+    [SerializeField] SlotUI[] slots;
     [SerializeField] Transform slotsParent;
+
+    [SerializeField] Ore testOre;
 
     public Ore ore;
     
     void Awake() {
         LoadAllSlotsAtAwake();
-        AddOreInInventory(ore, 10);
+        StartCoroutine(test());
     }
+
+    IEnumerator test() {
+        AddOreInInventory(testOre, 5);
+        yield return new WaitForSeconds(2f);
+
+        RemoveOreInInventory(testOre, 2);
+        yield return new WaitForSeconds(2f);
+
+        RemoveOreInInventory(ore, 150);
+        yield return new WaitForSeconds(2f);
+    }
+
 
     public void LoadAllSlotsAtAwake() {
         slots = new SlotUI[slotsParent.childCount];
@@ -88,9 +103,9 @@ public class InventoryManager : MonoBehaviour {
         for (int i = 0; i < slots.Length; i++) {
             SlotStack slotStack = slots[i].GetCurrentSlotStack();
 
+            //an empty slot
             if(slotStack.item == null) {
-                slotStack.currentStackCount += amount;
-                slotStack.item = ore;
+                slots[i].LoadItem(ore, amount);
                 return;
             }
         }
