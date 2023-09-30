@@ -20,6 +20,8 @@ public class PlayerStats : MonoBehaviour {
         else Destroy(gameObject);
 
         miningMaxTime = new CharacterStat(miningMaxTimeBaseStat);
+        miningRate = new CharacterStat(miningRateBaseStat);
+        miningpower = new CharacterStat(miningpowerBaseStat);
     }
 
     public ref CharacterStat GetCharacterStat() {
