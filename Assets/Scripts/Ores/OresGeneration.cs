@@ -22,7 +22,7 @@ public class OresGeneration : MonoBehaviour
         }
     }
 
-    /*void Update()
+    void Update()
     {
         Debug.Log(GetRock());
         
@@ -30,7 +30,7 @@ public class OresGeneration : MonoBehaviour
             Debug.Log("CAILLOUX");
         else
             Debug.Log(GetRandomOre().name);
-    }*/
+    }
 
     // Return true if create rock
     bool GetRock()
@@ -41,6 +41,14 @@ public class OresGeneration : MonoBehaviour
 
     public Ore GetRandomOre()
     {
-        Ore[] _canBePickedOres;
+        /*Ore[] _canBePickedOres;
+
+        foreach (var ore in oreDataBase.oreList)
+        {
+            if (ore.depthFound >= PlayerStats.instance.depth)
+                _canBePickedOres = 
+        }*/
+
+        return null;
     }
 }
