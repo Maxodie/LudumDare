@@ -14,6 +14,9 @@ public class InventoryManager : MonoBehaviour {
     
     void Awake() {
         LoadAllSlotsAtAwake();
+    }
+
+    void Start() {
         StartCoroutine(test());
     }
 
@@ -24,7 +27,7 @@ public class InventoryManager : MonoBehaviour {
         RemoveOreInInventory(testOre, 2);
         yield return new WaitForSeconds(2f);
 
-        RemoveOreInInventory(ore, 150);
+        AddOreInInventory(ore, 150);
         yield return new WaitForSeconds(2f);
     }
 
@@ -52,12 +55,14 @@ public class InventoryManager : MonoBehaviour {
         for (int i = 0; i < slots.Length; i++) {
 
             SlotStack slotStack = slots[i].GetCurrentSlotStack();
+            Debug.Log("mo");
 
             //if the ore in the slot is the good one
             if(slotStack.item == oreToChose) {
                 //if there are enough ore in the slot
                 if(slots[i].UpdateOreAmount(-oreNeedToBeRemoved)) {
                     result.currentStackCount += oreNeedToBeRemoved;
+                    Debug.Log("finish" + slots[i]);
                     break;
                 }
                 else { //if we need to get the ore in little amount
