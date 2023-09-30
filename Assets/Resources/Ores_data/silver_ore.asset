@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 0}
+  sprites: []
   name: Silver
-  hardness: 30
-  rarity: 100
-  price: 10
+  hardness: 20
+  rarityWeight: 10
+  price: 20
+  depthMin: 20
+  depthMax: 70

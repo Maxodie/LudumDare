@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 21300000, guid: 4f5364a9fe7e04741862d2af49136835, type: 3}
+  sprites: []
   name: Iron
   hardness: 10
-  rarity: 100
+  rarityWeight: 10
   price: 10
+  depthMin: 0
+  depthMax: 50

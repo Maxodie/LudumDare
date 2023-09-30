@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 0}
+  sprites: []
   name: Copper
   hardness: 40
-  rarity: 4
+  rarityWeight: 7
   price: 40
+  depthMin: 40
+  depthMax: 90
