@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,16 +11,21 @@ public class PlayerController : MonoBehaviour
     public bool isMining;
     public bool iscurrentlymining;
 
-    public GameObject targetedObject;
+    [SerializeField] float distanceToMine = 2f;
+
+    GameObject targetedObject;
 
     float spaceBarTimer;
 
     MiningState miningState;
 
+
     private void Awake()
     {
         if (instance == null)
             instance = this;
+        else
+            Destroy(this);
     }
 
     private void Start()
@@ -42,7 +48,7 @@ public class PlayerController : MonoBehaviour
                 if (targetedObject == null)
                 {
                     RaycastHit2D hit;
-                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, 0.75f);
+                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, distanceToMine);
                     if (hit) targetedObject = hit.transform.gameObject;
                     else
                     {
@@ -81,6 +87,7 @@ public class PlayerController : MonoBehaviour
             if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
             {
                 targetedObject.transform.GetComponent<SpriteRenderer>().sprite = objectData.sprites[miningState.currentState];
+
                 miningState.currentState --;
             }
 
@@ -98,6 +105,7 @@ public class PlayerController : MonoBehaviour
         GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
 
         Destroy(targetedObject.transform.gameObject);
+        
         if (blockBelow != null)
         {
             targetedObject = blockBelow;

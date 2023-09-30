@@ -18,10 +18,12 @@ public class PlayerInputController : MonoBehaviour
     public void StartMining(InputAction.CallbackContext context)
     {
         PlayerController.instance.isMining = true;
+        PlayerAnimationController.instance.animator.SetBool("isMining", true);
     }
 
     public void StopMining(InputAction.CallbackContext context)
     {
         PlayerController.instance.isMining = false;
+        PlayerAnimationController.instance.animator.SetBool("isMining", false);
     }
 }
