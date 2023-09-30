@@ -5,13 +5,13 @@ public class PlayerStats : MonoBehaviour {
     public static PlayerStats instance;
 
     [SerializeField] float miningMaxTimeBaseStat = 10f;
-    CharacterStat miningMaxTime;
+    public CharacterStat miningMaxTime;
 
     [SerializeField] float miningRateBaseStat = 5f;
-    CharacterStat miningRate;
+    public CharacterStat miningRate;
 
     [SerializeField] int miningpowerBaseStat = 1;
-    CharacterStat miningpower;
+    public CharacterStat miningpower;
 
     [SerializeField] float currenMoney = 0f;
 
