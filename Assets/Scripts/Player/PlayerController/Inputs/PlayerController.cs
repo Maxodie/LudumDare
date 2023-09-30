@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -35,15 +36,22 @@ public class PlayerController : MonoBehaviour
             if (spaceBarTimer > 0f)
             {
                 spaceBarTimer -= Time.deltaTime;
-                if (!targetedObject)
+                if (targetedObject.transform != null)
                 {
                     targetedObject = Physics2D.Raycast(raycastOrigin.position, transform.forward, 1);
                 }
                 else
                 {
-
+                    StartCoroutine(MiningCoroutine(PlayerStats.instance.miningRate.value));
                 }
             }
         }
+        
+    }
+
+    public IEnumerator MiningCoroutine(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        Destroy(targetedObject.transform);
     }
 }
