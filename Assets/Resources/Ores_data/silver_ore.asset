@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: silver_ore
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  icon: {fileID: 21300000, guid: dcea51d6065d642Ores_data46aeec467afeff684, type: 3}
-  name: Iron
+  icon: {fileID: 0}
+  name: Silver
   hardness: 30
   rarity: 100
   price: 10

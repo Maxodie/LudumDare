@@ -11,6 +11,7 @@ public class OresGeneration : MonoBehaviour
     void Awake()
     {
         oreDataBase = GetComponent<OreDataBase>();
+        Debug.Log(PlayerStats.instance.depth);
     }
 
     void Start()
@@ -40,6 +41,6 @@ public class OresGeneration : MonoBehaviour
 
     public Ore GetRandomOre()
     {
-        return null;
+        Ore[] _canBePickedOres;
     }
 }
