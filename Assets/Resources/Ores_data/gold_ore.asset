@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 0}
+  sprites: []
   name: Gold
   hardness: 30
-  rarity: 3
+  rarityWeight: 5
   price: 30
+  depthMin: 60
+  depthMax: 110

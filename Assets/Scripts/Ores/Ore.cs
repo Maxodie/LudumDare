@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Ore", menuName = "Ore")]
+[CreateAssetMenu(fileName = "New Ore", menuName = "Epitaph/Ore")]
 public class Ore : ScriptableObject
 {
     public GameObject prefab;
@@ -9,7 +9,8 @@ public class Ore : ScriptableObject
 
     public new string name;
     public int hardness;
-    public int rarity;
+    public int rarityWeight;
     public int price;
-    public int depthFound;
+    public int depthMin;
+    public int depthMax;
 }
