@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
 
+    public static PlayerStats instance;
+
     [SerializeField] float miningMaxTimeBaseStat = 10f;
     CharacterStat miningMaxTime;
 
     [SerializeField] float currenMoney = 0f;
 
     void Awake() {
+        if(!instance) instance = this;
+        else Destroy(gameObject);
+
         miningMaxTime = new CharacterStat(miningMaxTimeBaseStat);
     }
 
