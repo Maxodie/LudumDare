@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
   m_Name: WoodPicaxe 2
   m_EditorClassIdentifier: 
+  isSpawnAtStart: 1
+  itemName: 
+  itemIcon: {fileID: 21300000, guid: 103ffd2dcf52f324593df1ab55008113, type: 3}
+  cost: 0
+  nextUpgrade: {fileID: 11400000, guid: 084abdc11b2224d4387f6c4052f9145a, type: 2}
+  miningMaxTimeUpgradeboostAdd: 0
+  miningRateUpgradeboostAdd: 0
+  miningpowerBoostAdd: 0
+  miningMaxTimeUpgradePercentAdd: 0
+  miningRateUpgradePercentAdd: 0
+  miningpowerPercentAdd: 0

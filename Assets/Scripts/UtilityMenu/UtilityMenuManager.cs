@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class UtilityMenuManager : MonoBehaviour {
     [SerializeField] Tab[] tabs;
@@ -9,22 +8,12 @@ public class UtilityMenuManager : MonoBehaviour {
 
     void Awake() {
         SelectPanel(0);
-        StartCoroutine(Test());
     }
 
-    IEnumerator Test() {
-        yield return new WaitForSeconds(2f);
-        Debug.Log("1");
-        SelectPanel(1);
-        yield return new WaitForSeconds(2f);
-        SelectPanel(2);
-    }
-
-
-    void SelectPanel(int panelId) {
+    public void SelectPanel(int panelId) {
         if(panelId == tabs.Length-1) {
-            for(int i=tabs.Length-1; i>0; i--) {
-                tabs[i].tab.SetAsLastSibling();
+            for(int i=tabs.Length-1; i>=0; i--) {
+                tabs[i].tab.SetAsFirstSibling();
                 DisableTab(i);
             }
         }
