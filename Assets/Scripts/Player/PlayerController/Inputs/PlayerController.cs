@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     MiningState miningState;
 
+    [SerializeField] LayerMask blockLayerMask;
+
 
     private void Awake()
     {
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
                 if (targetedObject == null)
                 {
                     RaycastHit2D hit;
-                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, distanceToMine);
+                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, distanceToMine, blockLayerMask);
                     if (hit) targetedObject = hit.transform.gameObject;
                     else
                     {
@@ -123,7 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         // left block
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(targetedObject.transform.position + Vector3.right * Mathf.Abs(targetedObject.transform.lossyScale.x), transform.right, 1);
+        hit = Physics2D.Raycast(targetedObject.transform.position + Vector3.right * Mathf.Abs(targetedObject.transform.lossyScale.x), transform.right, 1, blockLayerMask);
 
 
 

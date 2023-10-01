@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class EnvironnementManager : MonoBehaviour
 {
-    [SerializeField] GameObject FloorPrefab;
+    [SerializeField] GameObject[] environnementObjects;
 
-    [SerializeField] GameObject[] floorObjects;
-
-    public void DeplaceFloor()
+    public void DeplaceEnvironnement()
     {
-        float floorWidth = floorObjects[0].GetComponent<SpriteRenderer>().size.x;
+        float environnementWidth = environnementObjects[0].GetComponent<SpriteRenderer>().size.x;
 
-        floorObjects[0].transform.position += new Vector3(floorWidth * 2, 0);
+        environnementObjects[0].transform.position += new Vector3(environnementWidth * 2, 0);
     }
 }
