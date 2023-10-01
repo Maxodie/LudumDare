@@ -38,7 +38,7 @@ public class WallCreator : MonoBehaviour
     {
         blockInColumn = 0;
         var (newBlock, newBlockData) = CreateBlock();
-        newBlock.transform.localPosition = Vector3.right * columnNumber;
+        newBlock.transform.localPosition = Vector3.right * columnNumber + Vector3.up * 0.5f;
         previousCreatedBlock = newBlock;
         
         for (int i = 0; i < maxWallHeight - 1; i++)
@@ -50,7 +50,7 @@ public class WallCreator : MonoBehaviour
             
             // Add to column
             blockInColumn++;
-            newBlock.transform.localPosition += Vector3.right * columnNumber + Vector3.up * blockInColumn;
+            newBlock.transform.localPosition += Vector3.right * columnNumber + Vector3.up * blockInColumn + Vector3.up * 0.5f;
 
             previousCreatedBlock = newBlock;
         }

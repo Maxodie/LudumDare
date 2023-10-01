@@ -4,6 +4,11 @@ using UnityEngine;
 public class Ore : InventoryItemScriptableObject
 {
     public Sprite[] sprites;
+
+    public Sprite damagedCorner;
+
+    public Sprite damagedBorder;
+
     public int hardness;
     public int rarityWeight;
     public int depthMin;

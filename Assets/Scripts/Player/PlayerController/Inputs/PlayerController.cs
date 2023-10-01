@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float distanceToMine = 2f;
 
-    GameObject targetedObject;
+    public GameObject targetedObject;
 
     float spaceBarTimer;
 
@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(miningState.remainingDurability);
             if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
             {
+                Debug.Log("changement de state");
                 targetedObject.transform.GetComponent<SpriteRenderer>().sprite = objectData.sprites[miningState.currentState];
 
                 miningState.currentState --;
@@ -105,14 +106,35 @@ public class PlayerController : MonoBehaviour
 
         GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
 
+        ChangeSpriteOfNearbyBlocks(blockBelow);
+
         if (!blockBelow) wallCreator.CreateWall();
-        
+
+        Debug.Log("meurt");
         Destroy(targetedObject.transform.gameObject);
         
         if (blockBelow != null)
         {
             targetedObject = blockBelow;
         }
+    }
+
+    void ChangeSpriteOfNearbyBlocks(GameObject blockBelow)
+    {
+        // left block
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(targetedObject.transform.position + Vector3.right * Mathf.Abs(targetedObject.transform.lossyScale.x), transform.right, 1);
+
+
+
+        if (hit)
+        {
+            hit.transform.GetComponent<SpriteRenderer>().sprite = hit.transform.GetComponent<ObjectData>().objectData.damagedBorder;
+        }
+
+        //block bellow
+        if (blockBelow != null)
+            blockBelow.transform.GetComponent<SpriteRenderer>().sprite = hit.transform.GetComponent<ObjectData>().objectData.damagedCorner;
     }
 }
 
