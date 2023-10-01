@@ -18,10 +18,10 @@ MonoBehaviour:
   emoteId: 0
   price: 30
   sprites:
-  - {fileID: 21300000, guid: 8cb8c7b79a7e3e147945eb5921a4d2e5, type: 3}
-  - {fileID: 21300000, guid: 1c6ffbb6ade8ce647a6aa165033714ec, type: 3}
-  damagedCorner: {fileID: 21300000, guid: 08d42f70e773ee2489b278994c30f66f, type: 3}
-  damagedBorder: {fileID: 21300000, guid: 7054a0bd98df9fa439d3399a4cbfe46c, type: 3}
+  - {fileID: 21300000, guid: a405b1fb14d64a747aa9c0c55bbef189, type: 3}
+  - {fileID: 21300000, guid: 794f9e402b4d09941b540645354d6a5f, type: 3}
+  damagedCorner: {fileID: 21300000, guid: 6a83cebded31cd5488cfa79edf4e3f75, type: 3}
+  damagedBorder: {fileID: 21300000, guid: bbb41695708de624e8269c34604babb5, type: 3}
   hardness: 30
   rarityWeight: 6
   depthMin: 60

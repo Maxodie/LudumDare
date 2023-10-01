@@ -9,14 +9,9 @@ public class InventoryManager : MonoBehaviour, IInventoryManager {
 
     [SerializeField] Color32 activeSellModeColor;
     [SerializeField] Color32 normalModeColor;
-    public Ore re;
     
     void Awake() {
         LoadAllSlotsAtAwake();
-    }
-
-    void Start( ) {
-        AddItemInInventory(re, 15);
     }
 
     public void LoadAllSlotsAtAwake() {

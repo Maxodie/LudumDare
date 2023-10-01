@@ -30,21 +30,32 @@ public class WallCreator : MonoBehaviour
     {
         for (int i = 0; i < size; i++)
         {
-            CreateWall();
+            CreateWall(i == 0);
         }
     }
     
-    public void CreateWall()
+    public void CreateWall(bool isFirstWall = false)
     {
         blockInColumn = 0;
         var (newBlock, newBlockData) = CreateBlock();
         newBlock.transform.localPosition = Vector3.right * columnNumber + Vector3.up * 0.5f;
         previousCreatedBlock = newBlock;
-        
+
+        if (isFirstWall)
+        {
+            newBlock.GetComponent<SpriteRenderer>().sprite = newBlockData.objectData.damagedBorder;
+        }
+
         for (int i = 0; i < maxWallHeight - 1; i++)
         {
             (newBlock, newBlockData) = CreateBlock();
-            
+
+            if (isFirstWall)
+            {
+                newBlock.GetComponent<SpriteRenderer>().sprite = newBlockData.objectData.damagedBorder;
+            }
+
+
             // Change blocBelow to the new bloc
             newBlockData.blockBelow = previousCreatedBlock;
             

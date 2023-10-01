@@ -1,11 +1,14 @@
 using System.Collections;
-using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     [SerializeField] WallCreator wallCreator;
+
+    [SerializeField] GameObject effectBarGo;
+    [SerializeField] Material effectBarMat;
 
     public Transform raycastOrigin;
 
@@ -20,6 +23,11 @@ public class PlayerController : MonoBehaviour
 
     MiningState miningState;
 
+    [SerializeField] LayerMask blockLayerMask;
+
+    [SerializeField] InventoryManager inventoryManager;
+    [SerializeField] Material particleMaterial;
+
 
     private void Awake()
     {
@@ -27,6 +35,8 @@ public class PlayerController : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+
+        effectBarGo.SetActive(false);
     }
 
     private void Start()
@@ -41,15 +51,25 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        MiningControl();
+    }
+
+    void MiningControl() {
         if (isMining)
         {
             if (spaceBarTimer > 0f)
             {
                 spaceBarTimer -= Time.deltaTime;
+
+                if(!effectBarGo.activeSelf)
+                    effectBarGo.SetActive(true);
+                
+                effectBarMat.SetFloat("_HealthAmout", spaceBarTimer / PlayerStats.instance.miningMaxTime.value);
+
                 if (targetedObject == null)
                 {
                     RaycastHit2D hit;
-                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, distanceToMine);
+                    hit = Physics2D.Raycast(raycastOrigin.position, transform.right, distanceToMine, blockLayerMask);
                     if (hit) targetedObject = hit.transform.gameObject;
                     else
                     {
@@ -63,7 +83,8 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
+        else if(effectBarGo.activeSelf)
+            effectBarGo.SetActive(false);
     }
 
     public IEnumerator MiningCoroutine(Ore objectData)
@@ -82,12 +103,12 @@ public class PlayerController : MonoBehaviour
             miningState = new MiningState(currentState, remainingDurability);
         }
 
+        particleMaterial.SetTexture("_MainTex", objectData.icon.texture);
+
         while (miningState.remainingDurability > 0)
         {
-            Debug.Log(miningState.remainingDurability);
             if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
             {
-                Debug.Log("changement de state");
                 targetedObject.transform.GetComponent<SpriteRenderer>().sprite = objectData.sprites[miningState.currentState];
 
                 miningState.currentState --;
@@ -104,13 +125,14 @@ public class PlayerController : MonoBehaviour
         miningState = null;
         iscurrentlymining = false;
 
+        inventoryManager.AddItemInInventory(objectData, (int)PlayerStats.instance.miningOreReceived.value);
+
         GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
 
         ChangeSpriteOfNearbyBlocks(blockBelow);
 
         if (!blockBelow) wallCreator.CreateWall();
 
-        Debug.Log("meurt");
         Destroy(targetedObject.transform.gameObject);
         
         if (blockBelow != null)
@@ -123,7 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         // left block
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(targetedObject.transform.position + Vector3.right * Mathf.Abs(targetedObject.transform.lossyScale.x), transform.right, 1);
+        hit = Physics2D.Raycast(targetedObject.transform.position + Vector3.right * Mathf.Abs(targetedObject.transform.lossyScale.x), transform.right, 1, blockLayerMask);
 
 
 
@@ -134,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
         //block bellow
         if (blockBelow != null)
-            blockBelow.transform.GetComponent<SpriteRenderer>().sprite = hit.transform.GetComponent<ObjectData>().objectData.damagedCorner;
+            blockBelow.transform.GetComponent<SpriteRenderer>().sprite = blockBelow.transform.GetComponent<ObjectData>().objectData.damagedCorner;
     }
 }
 
