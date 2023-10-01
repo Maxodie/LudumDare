@@ -1,11 +1,13 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     [SerializeField] WallCreator wallCreator;
+
+    [SerializeField] GameObject effectBarGo;
+    [SerializeField] Material effectBarMat;
 
     public Transform raycastOrigin;
 
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+
+        effectBarGo.SetActive(false);
     }
 
     private void Start()
@@ -41,11 +45,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        MiningControl();
+    }
+
+    void MiningControl() {
         if (isMining)
         {
             if (spaceBarTimer > 0f)
             {
                 spaceBarTimer -= Time.deltaTime;
+
+                if(!effectBarGo.activeSelf)
+                    effectBarGo.SetActive(true);
+                
+                effectBarMat.SetFloat("_HealthAmout", spaceBarTimer / PlayerStats.instance.miningMaxTime.value);
+
                 if (targetedObject == null)
                 {
                     RaycastHit2D hit;
@@ -63,7 +77,8 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
+        else if(effectBarGo.activeSelf)
+            effectBarGo.SetActive(false);
     }
 
     public IEnumerator MiningCoroutine(Ore objectData)
@@ -84,10 +99,8 @@ public class PlayerController : MonoBehaviour
 
         while (miningState.remainingDurability > 0)
         {
-            Debug.Log(miningState.remainingDurability);
             if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
             {
-                Debug.Log("changement de state");
                 targetedObject.transform.GetComponent<SpriteRenderer>().sprite = objectData.sprites[miningState.currentState];
 
                 miningState.currentState --;
@@ -110,7 +123,6 @@ public class PlayerController : MonoBehaviour
 
         if (!blockBelow) wallCreator.CreateWall();
 
-        Debug.Log("meurt");
         Destroy(targetedObject.transform.gameObject);
         
         if (blockBelow != null)
