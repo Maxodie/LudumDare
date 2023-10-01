@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -54,6 +53,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void RemoveInAnim()
     {
+        Debug.Log("ts");
         StartCoroutine(RemoveInAnimCoroutine());
     }
 
