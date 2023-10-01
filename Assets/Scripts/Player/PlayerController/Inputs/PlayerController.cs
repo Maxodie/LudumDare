@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+    [SerializeField] WallCreator wallCreator;
 
     public Transform raycastOrigin;
 
@@ -104,6 +105,8 @@ public class PlayerController : MonoBehaviour
 
         GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
 
+        if (!blockBelow) wallCreator.CreateWall();
+        
         Destroy(targetedObject.transform.gameObject);
         
         if (blockBelow != null)
