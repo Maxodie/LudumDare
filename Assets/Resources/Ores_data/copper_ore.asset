@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 0}
-  sprites:
-  - {fileID: 21300000, guid: f83e759633604c9488a76c98fca60fc2, type: 3}
-  - {fileID: 21300000, guid: 03cc885bc1be9ca4b8bb52f3c6c874ca, type: 3}
+  sprites: []
   name: Copper
   hardness: 40
-  rarity: 4
+  rarityWeight: 7
   price: 40
-  depthFound: 0
+  depthMin: 40
+  depthMax: 90

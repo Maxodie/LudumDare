@@ -1,4 +1,5 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,44 +12,95 @@ public class OresGeneration : MonoBehaviour
     void Awake()
     {
         oreDataBase = GetComponent<OreDataBase>();
-        Debug.Log(PlayerStats.instance.depth);
     }
 
-    void Start()
+    IEnumerator Start()
     {
-        foreach (var ore in oreDataBase.oreList)
+        /*while (true)
         {
-            Debug.Log(ore.name);
-        }
-    }
+            yield return new WaitForSeconds(0.2f);
+            PlayerStats.instance.depth += 1;
 
-    void Update()
-    {
-        Debug.Log(GetRock());
-        
-        if (GetRock())
-            Debug.Log("CAILLOUX");
-        else
-            Debug.Log(GetRandomOre().name);
+            if (DrawRock())
+                Debug.Log("Cailloux");
+            else
+                Debug.Log(GetRandomOre().name);
+        }*/
+        return null;
     }
 
     // Return true if create rock
-    bool GetRock()
+    bool DrawRock()
     {
         float result = Random.Range(0f, 1f);
         return result <= rockApparitionPercentage;
     }
 
-    public Ore GetRandomOre()
+    Ore GetRandomOre()
     {
-        /*Ore[] _canBePickedOres;
+        // Get ore rarity weight
+        // IDictionary<oreDataBaseId, rarityWeight>
+        IDictionary<int, int> oreRarityWeightDictionary = new Dictionary<int, int>();
+        int totalRarityWeight = 0;
+        int playerDepth = PlayerStats.instance.depth;
 
-        foreach (var ore in oreDataBase.oreList)
+        for (int i = 0; i < oreDataBase.oreList.Length; i++)
         {
-            if (ore.depthFound >= PlayerStats.instance.depth)
-                _canBePickedOres = 
-        }*/
+            Ore selectedOre = oreDataBase.oreList[i];
+            float temporaryRarityWeight = 0;
+            
+            if (playerDepth >= selectedOre.depthMin && playerDepth <= selectedOre.depthMax)
+            {
+                int depthMid = (selectedOre.depthMin + selectedOre.depthMax) / 2;
 
-        return null;
+                if (playerDepth == depthMid)
+                {
+                    oreRarityWeightDictionary.Add(i, selectedOre.rarityWeight);
+                    totalRarityWeight += selectedOre.rarityWeight;
+                    continue;
+                }
+                else if (playerDepth < depthMid)
+                {
+                    temporaryRarityWeight = selectedOre.rarityWeight *
+                                                ((playerDepth - selectedOre.depthMin) /
+                                                 (float)(depthMid - selectedOre.depthMin));
+
+                    if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
+                }
+                else if (playerDepth > depthMid)
+                {
+                    temporaryRarityWeight = selectedOre.rarityWeight *
+                                            ((playerDepth - depthMid) /
+                                             (float)(selectedOre.depthMax - depthMid));
+                    
+                    if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
+                }
+
+                temporaryRarityWeight = Mathf.Round(temporaryRarityWeight);
+                
+                //Debug.Log(oreDataBase.oreList[i].name + " : " + i);
+
+                oreRarityWeightDictionary.Add(i, (int)temporaryRarityWeight);
+                totalRarityWeight += (int)temporaryRarityWeight;
+            }
+        }
+        
+        return oreDataBase.oreList[drawRandomOreID(oreRarityWeightDictionary, totalRarityWeight)];
+    }
+
+    int drawRandomOreID(IDictionary<int, int> oreDictionary, int totalRarityWeight)
+    {
+        List<int> oreIdArray = new List<int>();
+        int randomInt = Random.Range(0, totalRarityWeight);
+
+        foreach (KeyValuePair<int, int> entry in oreDictionary)
+        {
+            for (int i = 0; i < entry.Value; i++)
+            {
+                oreIdArray.Add(entry.Key);
+            }
+        }
+        
+        return oreIdArray[randomInt];
     }
 }
