@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
   m_Name: copper_ore
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 103ffd2dcf52f324593df1ab55008113, type: 3}
+  icon: {fileID: 21300000, guid: 1b5a23fd26266284b8f203d521646e32, type: 3}
   itemName: 
   defaultDescription: 
   emoteId: 0
   price: 40
   sprites:
-  - {fileID: 21300000, guid: 32f3125b8a22ede46acbccca4e8b071e, type: 3}
-  - {fileID: 21300000, guid: 29221b2344f25bb4da2f4cfd94e072d9, type: 3}
-  damagedCorner: {fileID: 21300000, guid: ea833d779996e3244b3b567764be9cf0, type: 3}
-  damagedBorder: {fileID: 21300000, guid: a6f88f8278383d949aad4c356a519759, type: 3}
+  - {fileID: 21300000, guid: d8452b86d04cf4e40b383a40dc25084c, type: 3}
+  - {fileID: 21300000, guid: 2a31cd9764829224dacb2d6c7573d664, type: 3}
+  damagedCorner: {fileID: 21300000, guid: da7c33e4d2ce598409d14251052284c2, type: 3}
+  damagedBorder: {fileID: 21300000, guid: 8c879253f6843ec40a7f0fbfb6a5d2b9, type: 3}
   hardness: 40
   rarityWeight: 7
   depthMin: 40

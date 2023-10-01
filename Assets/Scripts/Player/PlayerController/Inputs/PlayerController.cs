@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
 
         //block bellow
         if (blockBelow != null)
-            blockBelow.transform.GetComponent<SpriteRenderer>().sprite = hit.transform.GetComponent<ObjectData>().objectData.damagedCorner;
+            blockBelow.transform.GetComponent<SpriteRenderer>().sprite = blockBelow.transform.GetComponent<ObjectData>().objectData.damagedCorner;
     }
 }
 

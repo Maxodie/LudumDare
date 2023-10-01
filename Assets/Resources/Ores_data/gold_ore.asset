@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
   m_Name: gold_ore
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 103ffd2dcf52f324593df1ab55008113, type: 3}
+  icon: {fileID: 21300000, guid: 1866552103042f94c939541d1b46f6ed, type: 3}
   itemName: 
   defaultDescription: 
   emoteId: 0
   price: 30
   sprites:
-  - {fileID: 21300000, guid: 32f3125b8a22ede46acbccca4e8b071e, type: 3}
-  - {fileID: 21300000, guid: 29221b2344f25bb4da2f4cfd94e072d9, type: 3}
-  damagedCorner: {fileID: 21300000, guid: ea833d779996e3244b3b567764be9cf0, type: 3}
-  damagedBorder: {fileID: 21300000, guid: a6f88f8278383d949aad4c356a519759, type: 3}
+  - {fileID: 21300000, guid: a405b1fb14d64a747aa9c0c55bbef189, type: 3}
+  - {fileID: 21300000, guid: 794f9e402b4d09941b540645354d6a5f, type: 3}
+  damagedCorner: {fileID: 21300000, guid: 6a83cebded31cd5488cfa79edf4e3f75, type: 3}
+  damagedBorder: {fileID: 21300000, guid: bbb41695708de624e8269c34604babb5, type: 3}
   hardness: 30
   rarityWeight: 6
   depthMin: 60
