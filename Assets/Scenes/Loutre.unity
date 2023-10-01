@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miningMaxTimeBaseStat: 50
-  miningRateBaseStat: 0.01
+  miningRateBaseStat: 1
   miningpowerBaseStat: 1
   currenMoney: 0
   depth: 1

@@ -6,22 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="2c2a3c66-8813-476b-bb27-050e85e2a281" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/blocDegueu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/blocDegueu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/ore_icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/ore_icon_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/stone_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/stone_sprite.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/copper_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/copper_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/gold_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/gold_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/iron_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/iron_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/silver_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/silver_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gunilem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gunilem.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/blocDegueu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/blocDegueu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_icon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_icon_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1_damaged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/ore_sprite_1_damaged.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite_damaged.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Sprites/Ores_sprites/stone_sprite_damaged.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loutre.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loutre.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/ObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ores/ObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ores/OresGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ores/OresGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController/Inputs/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController/Inputs/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController/Inputs/PlayerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController/Inputs/PlayerInputs.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696031985816</updated>
       <workItem from="1696031993933" duration="1866000" />
-      <workItem from="1696150843360" duration="16215000" />
+      <workItem from="1696150843360" duration="18603000" />
     </task>
     <servers />
   </component>
