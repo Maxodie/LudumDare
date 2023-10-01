@@ -3268,14 +3268,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4079481257367686244, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: miningAnim
+      value: 
+      objectReference: {fileID: 7400000, guid: 215ba308bb824fa4cac8a0c20423a628, type: 2}
     - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: currentMoneyText
       value: 
       objectReference: {fileID: 417402658}
     - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: effectBarGo
+      value: 
+      objectReference: {fileID: 1800294827}
+    - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: wallCreator
       value: 
       objectReference: {fileID: 890312905}
+    - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: effectBarMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d3289a34e0c976745b39ced221a1096f, type: 2}
     - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: blockLayerMask.m_Bits
       value: 64

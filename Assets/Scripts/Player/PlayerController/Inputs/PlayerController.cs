@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
     MiningState miningState;
 
     [SerializeField] LayerMask blockLayerMask;
+
+    [SerializeField] InventoryManager inventoryManager;
+    [SerializeField] Material particleMaterial;
 
 
     private void Awake()
@@ -99,6 +103,8 @@ public class PlayerController : MonoBehaviour
             miningState = new MiningState(currentState, remainingDurability);
         }
 
+        particleMaterial.SetTexture("_MainTex", objectData.icon.texture);
+
         while (miningState.remainingDurability > 0)
         {
             if (miningState.remainingDurability <= durabilityBetweenState * miningState.currentState)
@@ -118,6 +124,8 @@ public class PlayerController : MonoBehaviour
         }
         miningState = null;
         iscurrentlymining = false;
+
+        inventoryManager.AddItemInInventory(objectData, (int)PlayerStats.instance.miningOreReceived.value);
 
         GameObject blockBelow = targetedObject.transform.GetComponent<ObjectData>().blockBelow;
 
