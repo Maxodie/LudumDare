@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -9,7 +8,9 @@ public class PlayerAnimationController : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
-    public float TimeBetweenEachAnim = 10f;
+    public float timeBetweenEachAnim = 10f;
+
+    public float timer = 0f;
 
     private void Awake()
     {
@@ -19,10 +20,19 @@ public class PlayerAnimationController : MonoBehaviour
             Destroy(this);
     }
 
-
-    private void Start()
-    {
+    void Start() {
         animator = GetComponent<Animator>();
+        
+        DoIdleAnim();
+    }
+
+    void Update() {
+        timer += Time.deltaTime;
+
+        if(timer >= timeBetweenEachAnim) {
+            DoIdleAnim();
+            timer = 0f;
+        }
     }
 
     public void ActiveBreakingParticules()
@@ -31,7 +41,7 @@ public class PlayerAnimationController : MonoBehaviour
             particle.Play();
     }
 
-    public void SetIdleIndex()
+    public void DoIdleAnim()
     {
         int randomIndex = Random.Range(0, 50);
         if (randomIndex < 30)
@@ -44,23 +54,7 @@ public class PlayerAnimationController : MonoBehaviour
         }
         else
             animator.SetInteger("indexIdle", 3);
-    }
 
-    public void SetInAnim()
-    {
-        animator.SetBool("inAnim", true);
-    }
-
-    public void RemoveInAnim()
-    {
-        Debug.Log("ts");
-        StartCoroutine(RemoveInAnimCoroutine());
-    }
-
-    IEnumerator RemoveInAnimCoroutine()
-    {
-        yield return new WaitForSeconds(TimeBetweenEachAnim);
-
-        animator.SetBool("inAnim", false);
+        animator.SetTrigger("StartIdle");
     }
 }

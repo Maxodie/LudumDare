@@ -38,6 +38,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void StopMining(InputAction.CallbackContext context)
     {
+        amin.ResetTrigger("StartIdle");
         PlayerController.instance.isMining = false;
     
         if(canCancelMining) {
