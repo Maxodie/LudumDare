@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,8 @@ using Random = UnityEngine.Random;
 
 public class OresGeneration : MonoBehaviour
 {
-    [SerializeField] OreDataBase oreDataBase;
+    OreDataBase oreDataBase;
+    [SerializeField] Ore stoneObjectRef;
 
     [SerializeField] [Range(0.0f,1.0f)] float rockApparitionPercentage;
 
@@ -14,19 +16,12 @@ public class OresGeneration : MonoBehaviour
         oreDataBase = GetComponent<OreDataBase>();
     }
 
-    IEnumerator Start()
+    public Ore DrawRandomOre()
     {
-        /*while (true)
-        {
-            yield return new WaitForSeconds(0.2f);
-            PlayerStats.instance.depth += 1;
-
-            if (DrawRock())
-                Debug.Log("Cailloux");
-            else
-                Debug.Log(GetRandomOre().name);
-        }*/
-        return null;
+        if (DrawRock())
+            return stoneObjectRef;
+        else
+            return GetRandomOre();
     }
 
     // Return true if create rock
