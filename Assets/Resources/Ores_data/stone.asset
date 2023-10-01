@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
   m_Name: stone
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
   icon: {fileID: 0}
+  itemName: 
+  defaultDescription: 
+  emoteId: 0
+  price: 5
   sprites:
   - {fileID: 21300000, guid: 32f3125b8a22ede46acbccca4e8b071e, type: 3}
   - {fileID: 21300000, guid: 29221b2344f25bb4da2f4cfd94e072d9, type: 3}
-  name: Stone
+  damagedCorner: {fileID: 21300000, guid: ea833d779996e3244b3b567764be9cf0, type: 3}
+  damagedBorder: {fileID: 21300000, guid: a6f88f8278383d949aad4c356a519759, type: 3}
   hardness: 50
   rarityWeight: -1
-  price: 5
   depthMin: -1
   depthMax: -1
