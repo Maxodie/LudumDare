@@ -123,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 34
+        y: 51
         width: 17
         height: 17
       alignment: 0
@@ -144,7 +144,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 34
+        y: 51
         width: 17
         height: 17
       alignment: 0
@@ -165,7 +165,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 34
+        y: 51
         width: 17
         height: 17
       alignment: 0
@@ -186,7 +186,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 17
+        y: 34
         width: 17
         height: 17
       alignment: 0
@@ -207,7 +207,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 17
+        y: 34
         width: 17
         height: 17
       alignment: 0
@@ -228,7 +228,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 17
+        y: 34
         width: 17
         height: 17
       alignment: 0
@@ -249,7 +249,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -270,7 +270,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 0
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -291,7 +291,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 0
+        y: 17
         width: 17
         height: 17
       alignment: 0
@@ -303,6 +303,27 @@ TextureImporter:
       bones: []
       spriteID: 95f959a3eff98834abea80bab065c14c
       internalID: -1478091446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsIcons_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc44eb0493b8e94fa6ddd42e98c9df7
+      internalID: -1652003595
       vertices: []
       indices: 
       edges: []
@@ -327,6 +348,7 @@ TextureImporter:
       StatsIcons_6: -178520165
       StatsIcons_7: -145228581
       StatsIcons_8: -1478091446
+      StatsIcons_9: -1652003595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour {
 
@@ -13,7 +14,12 @@ public class PlayerStats : MonoBehaviour {
     [SerializeField] int miningpowerBaseStat = 1;
     public CharacterStat miningpower;
 
+    [SerializeField] int miningOreReceivedBaseStat = 1;
+    public CharacterStat miningOreReceived;
+
     [SerializeField] float currentMoney = 0f;
+
+    [SerializeField] TMP_Text currentMoneyText;
 
     public int depth = 0;
 
@@ -24,6 +30,9 @@ public class PlayerStats : MonoBehaviour {
         miningMaxTime = new CharacterStat(miningMaxTimeBaseStat);
         miningRate = new CharacterStat(miningRateBaseStat);
         miningpower = new CharacterStat(miningpowerBaseStat);
+        miningOreReceived = new CharacterStat(miningOreReceivedBaseStat);
+
+        UpdateMoneyUI();
     }
 
     public ref CharacterStat GetCharacterStat() {
@@ -38,6 +47,11 @@ public class PlayerStats : MonoBehaviour {
         if(!canUpdateMoney(amount)) return false;
 
         currentMoney += amount;
+        UpdateMoneyUI();
         return true;
+    }
+
+    void UpdateMoneyUI() {
+        currentMoneyText.text = currentMoney.ToString("0") + "<sprite=3>";
     }
 }

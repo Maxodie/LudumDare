@@ -3,11 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 
 public class SlotUI : MonoBehaviour {
+    SellOreSystem sellOreSystem;
+
     [SerializeField] Image slotIcon;
+    public Image slotBackground;
 
     [SerializeField] TMP_Text slotNumberText;
 
-    [SerializeField] SlotStack currentSlotStack;
+    SlotStack currentSlotStack;
 
     void Awake() {
         currentSlotStack = new SlotStack();
@@ -15,10 +18,14 @@ public class SlotUI : MonoBehaviour {
         LoadItem(null, 0);
     }
 
-    public void LoadItem(Ore ore, int amount) {
-        currentSlotStack.item = ore;
+    void Start() {
+        sellOreSystem = SellOreSystem.instance;
+    }
 
-        if(ore) {
+    public void LoadItem(InventoryItemScriptableObject item, int amount) {
+        currentSlotStack.item = item;
+
+        if(item) {
             currentSlotStack.currentStackCount = amount;
             slotIcon.sprite = currentSlotStack.item.icon;
             slotIcon.color = Color.white;
@@ -36,7 +43,7 @@ public class SlotUI : MonoBehaviour {
         return ref currentSlotStack;
     }
 
-    bool CanUpdateAmount(int amount) {
+    public bool CanUpdateAmount(int amount) {
         return currentSlotStack.currentStackCount + amount >= 0;
     }
 
@@ -51,5 +58,25 @@ public class SlotUI : MonoBehaviour {
             LoadItem(null, 0);
 
         return true;
+    }
+
+    //used on sell mode activated
+    public void OnClick() {
+        if(!sellOreSystem.sellMode) return;
+
+        if(!currentSlotStack.item) {
+            sellOreSystem.OnEndSellMode();
+            return;
+        }
+
+        int price = currentSlotStack.item.price * currentSlotStack.currentStackCount;
+
+        PlayerStats.instance.UpdateMoney(price);
+
+        NotificationSystem.instance.MakeNotif(new Color(142, 255, 136), $"{currentSlotStack.item.itemName} has been sold for {price}<sprite=3>");
+
+        LoadItem(null, 0);
+
+        sellOreSystem.OnEndSellMode();
     }
 }

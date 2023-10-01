@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
   m_Name: iron_ore
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  icon: {fileID: 21300000, guid: 4f5364a9fe7e04741862d2af49136835, type: 3}
-  sprites:
-  - {fileID: 21300000, guid: e335fe60b1e9d21469c9175a89f14a6c, type: 3}
-  - {fileID: 21300000, guid: 76af0141e0eb0d840a494da8b1a7324b, type: 3}
-  name: Iron
+  icon: {fileID: 21300000, guid: 103ffd2dcf52f324593df1ab55008113, type: 3}
+  sprites: []
+  oreName: 
+  emoteId: 0
   hardness: 10
   rarityWeight: 10
   price: 10
