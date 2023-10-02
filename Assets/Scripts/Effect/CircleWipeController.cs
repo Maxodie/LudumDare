@@ -12,26 +12,13 @@ public class CircleWipeController : MonoBehaviour
 {
     public static CircleWipeController instance;
 
-    private const float RADIUS = 2f;
+    [SerializeField] Material material;
 
-    public Shader shader;
+    [Range(0, 1f)]
+    [SerializeField] float radius = 0f;
 
-    public Material material;
-
-    [Range(0, RADIUS)]
-    public float radius = 0f;
-
-    public float horizontal = 16;
-
-    public float verical = 9;
-
-    public float duration = 1f;
-
-    public Color fadeColour = Color.black;
-
-    public Texture fadeTexture;
-
-    public Vector2 offset;
+    [SerializeField] Vector2 offset;
+    [SerializeField] float duration;
 
     void Awake()
     {
@@ -41,19 +28,14 @@ public class CircleWipeController : MonoBehaviour
         UpdateShader();
     }
 
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        Graphics.Blit(source, destination, material);
-    }
-
     public void FadeOut(Action callback = null)
     {
-        StartCoroutine(DoFade(RADIUS, 0f, callback));
+        StartCoroutine(DoFade(1f, 0f, callback));
     }
 
     public void FadeIn(Action callback = null)
     {
-        StartCoroutine(DoFade(0, RADIUS, callback));
+        StartCoroutine(DoFade(0, 1f, callback));
     }
 
     IEnumerator DoFade(float start, float end, Action callback = null)
@@ -77,13 +59,7 @@ public class CircleWipeController : MonoBehaviour
 
     public void UpdateShader()
     {
-        var radiusSpeed = Mathf.Max(horizontal, verical);
-        material.SetFloat("_Horizontal", horizontal);
-        material.SetFloat("_Vertical", verical);
-        material.SetFloat("_RadiusSpeed", radiusSpeed);
-        material.SetFloat("_Radius", radius);
-        material.SetColor("_FadeColour", fadeColour);
-        material.SetTexture("_FadeTex", fadeTexture);
+        material.SetFloat("_Progress", radius);
         material.SetVector("_Offset", offset);
     }
 }
