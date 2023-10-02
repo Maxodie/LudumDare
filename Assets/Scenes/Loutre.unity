@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647ac9244e93b5d4e971e31950ac667e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miningAnim: {fileID: 0}
 --- !u!114 &1202634817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,11 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallCreator: {fileID: 1397895442}
+  effectBarGo: {fileID: 0}
+  effectBarMat: {fileID: 0}
   raycastOrigin: {fileID: 1281067622}
   isMining: 0
   iscurrentlymining: 0
   distanceToMine: 2
   targetedObject: {fileID: 0}
+  blockLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  inventoryManager: {fileID: 0}
+  particleMaterial: {fileID: 0}
 --- !u!114 &1202634818
 MonoBehaviour:
   m_ObjectHideFlags: 0
