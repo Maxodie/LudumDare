@@ -17,6 +17,9 @@ public class PlayerStats : MonoBehaviour {
     [SerializeField] int miningOreReceivedBaseStat = 1;
     public CharacterStat miningOreReceived;
 
+    [SerializeField] int mwalkSpeedBaseStat = 1;
+    public CharacterStat mwalkSpeed;
+
     [SerializeField] float currentMoney = 0f;
 
     [SerializeField] TMP_Text currentMoneyText;
