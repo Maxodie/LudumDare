@@ -6,7 +6,7 @@ public class PlayerInputController : MonoBehaviour
 {
     PlayerInputs playerInputs;
     
-    Animator amin;
+    [SerializeField] Animator amin;
     WaitForSeconds wait;
 
     [SerializeField] AnimationClip miningAnim;
@@ -14,7 +14,6 @@ public class PlayerInputController : MonoBehaviour
     bool canCancelMining = true;
 
     void Awake() {
-        amin = PlayerAnimationController.instance.animator;
         wait = new WaitForSeconds(miningAnim.length/2);
     }
 
@@ -30,6 +29,8 @@ public class PlayerInputController : MonoBehaviour
 
     public void StartMining(InputAction.CallbackContext context)
     {
+        if(!PlayerController.instance.canPlay) return;
+
         PlayerController.instance.isMining = true;
         amin.SetBool("isMining", true);
 
@@ -38,6 +39,8 @@ public class PlayerInputController : MonoBehaviour
 
     public void StopMining(InputAction.CallbackContext context)
     {
+        if(!PlayerController.instance.canPlay) return;
+
         amin.ResetTrigger("StartIdle");
         PlayerController.instance.isMining = false;
     
