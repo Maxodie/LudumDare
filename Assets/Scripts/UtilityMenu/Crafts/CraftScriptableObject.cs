@@ -27,8 +27,9 @@ public class CraftRequiredItem {
 public enum EquipmentType {
     HELMET = 0,
     PICKAXE = 1,
-    BREARD = 2,
+    BEARD = 2,
     PANTS = 3,
     FACE = 4,
-    ITEM = 5,
+    ARM = 5,
+    ITEM = 6,
 }

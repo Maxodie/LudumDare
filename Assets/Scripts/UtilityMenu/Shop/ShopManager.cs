@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class ShopManager : MonoBehaviour {
     [SerializeField] ShopItemDataBase shopItemDataBase;
+    [SerializeField] InventoryManager inventoryManager;
 
     [SerializeField] GameObject shopItemUIPrefab;
     [SerializeField] Transform spawnItemPos;
@@ -62,7 +63,12 @@ public class ShopManager : MonoBehaviour {
     }
 
     public void BuyItem(ShopItemScriptableObject shopItem, ShopItemUI shopItemUI) {
-        ActiveItemBonus(shopItem);
+
+        if(shopItem.isBoost)
+            ActiveItemBonus(shopItem);
+        else {
+            inventoryManager.AddItemInInventory(shopItem.itemGived, shopItem.itemGivedNumber);
+        }
 
         if(shopItem.nextUpgrade)
             InstantiateUIItem(shopItem.nextUpgrade, shopItemUI.transform.GetSiblingIndex());

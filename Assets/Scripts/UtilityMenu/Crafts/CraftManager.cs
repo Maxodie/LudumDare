@@ -64,6 +64,9 @@ public class CraftManager : MonoBehaviour {
         if(craftedItem.isCraftGiveEquipedItem) {
             //Add the item
             shopManager.ActiveItemBonus(craftedItem.itemGived);
+
+            //link with the skin
+            PlayerSkinManager.instance.ChangePlayerSkin(craftedItem.equipementType, craftedItem.craftVisual);
         }
         else {
             inventoryManager.AddItemInInventory(craftedItem.oreGived, craftedItem.oreGivedNumber);
