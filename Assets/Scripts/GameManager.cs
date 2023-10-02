@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndParty() {
+        CircleWipeController.instance.FadeOut();
         wallCreator.ResetWall();
-        Debug.Log("end");
 
         StartParty();
     }

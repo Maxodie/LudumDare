@@ -29,6 +29,8 @@ public class PlayerInputController : MonoBehaviour
 
     public void StartMining(InputAction.CallbackContext context)
     {
+        if(!PlayerController.instance.canPlay) return;
+
         PlayerController.instance.isMining = true;
         amin.SetBool("isMining", true);
 
@@ -37,6 +39,8 @@ public class PlayerInputController : MonoBehaviour
 
     public void StopMining(InputAction.CallbackContext context)
     {
+        if(!PlayerController.instance.canPlay) return;
+
         amin.ResetTrigger("StartIdle");
         PlayerController.instance.isMining = false;
     
