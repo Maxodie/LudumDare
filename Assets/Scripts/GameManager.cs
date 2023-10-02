@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] PlayerController playerController;
     [SerializeField] WallCreator wallCreator;
+    [SerializeField] Vector2 startFadeOffset;
+    public Vector2 endFadeOffset;
 
     void Awake() {
         if(!instance) instance = this;
@@ -16,13 +18,13 @@ public class GameManager : MonoBehaviour {
     }
 
     void StartParty() {
+        CircleWipeController.instance.FadeOut(startFadeOffset);
         playerController.ResetPlayer();
 
         wallCreator.StartGeneration();
     }
 
     public void EndParty() {
-        CircleWipeController.instance.FadeOut();
         wallCreator.ResetWall();
 
         StartParty();

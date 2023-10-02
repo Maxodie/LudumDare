@@ -28,20 +28,23 @@ public class CircleWipeController : MonoBehaviour
         UpdateShader();
     }
 
-    public void FadeOut(Action callback = null)
+    public void FadeOut(Vector2 offset, Action callback = null)
     {
-        StartCoroutine(DoFade(1f, 0f, callback));
+        this.offset = offset;
+        StartCoroutine(DoFade(0f, 1f, callback));
     }
 
-    public void FadeIn(Action callback = null)
+    public void FadeIn(Vector2 offset, Action callback = null)
     {
-        StartCoroutine(DoFade(0, 1f, callback));
+        this.offset = offset;
+        StartCoroutine(DoFade(1f, 0f, callback));
     }
 
     IEnumerator DoFade(float start, float end, Action callback = null)
     {
         radius = start;
         UpdateShader();
+        Debug.Log("tejst");
 
         var time = 0f;
         while (time < 1f)
@@ -50,6 +53,7 @@ public class CircleWipeController : MonoBehaviour
             time += Time.deltaTime / duration;
             UpdateShader();
             yield return null;
+            Debug.Log("test");
         }
 
         radius = end;

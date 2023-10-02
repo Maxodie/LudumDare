@@ -22,7 +22,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     //Called in death annimation
     public void FadeInEndScreen() {
-        CircleWipeController.instance.FadeOut();
+        CircleWipeController.instance.FadeIn(GameManager.instance.endFadeOffset);
     }
 
     public void ReactivePlayMode() {
