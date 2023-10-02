@@ -32,7 +32,9 @@ public class PlayerInputController : MonoBehaviour
         if(!PlayerController.instance.canPlay) return;
 
         PlayerController.instance.isMining = true;
+        amin.SetBool("IsSleeping", false);
         amin.SetBool("isMining", true);
+        amin.ResetTrigger("StartIdle");
 
         StartCoroutine(CheckMinimumMiningTime());
     }
