@@ -27,7 +27,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     //Called in death annimation
     public void FadeInEndScreen() {
-        CircleWipeController.instance.FadeIn(GameManager.instance.endFadeOffset);
+        CircleWipeController.instance.FadeIn(GameManager.instance.endFadeOffset, 2f);
     }
 
     public void ReactivePlayMode() {
@@ -68,6 +68,7 @@ public class PlayerAnimationController : MonoBehaviour
         else if (randomIndex < 35)
         {
             animator.SetInteger("indexIdle", 2);
+            animator.SetBool("IsSleeping", true);
         }
         else
             animator.SetInteger("indexIdle", 3);
@@ -80,6 +81,12 @@ public class PlayerAnimationController : MonoBehaviour
     public void OnDeath() {
         animator.SetBool("IsDeath", true);
         animator.SetBool("isMining", false);
+        WakeUp();
+    }
+
+    public void WakeUp() {
+        animator.SetBool("IsSleeping", false);
+        animator.ResetTrigger("StartIdle");
     }
 
     public void PlaceTomb()

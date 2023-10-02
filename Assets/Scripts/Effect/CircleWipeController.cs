@@ -19,23 +19,33 @@ public class CircleWipeController : MonoBehaviour
 
     [SerializeField] Vector2 offset;
     [SerializeField] float duration;
+    float startDuration;
 
     void Awake()
     {
         if(!instance) instance = this;
         else Destroy(gameObject);
 
+        startDuration = duration;
         UpdateShader();
     }
 
-    public void FadeOut(Vector2 offset, Action callback = null)
+    public void FadeOut(Vector2 offset, float duration = 0f, Action callback = null)
     {
+        if(duration == 0)
+            duration = startDuration;
+
         this.offset = offset;
         StartCoroutine(DoFade(0f, 1f, callback));
     }
 
-    public void FadeIn(Vector2 offset, Action callback = null)
+    public void FadeIn(Vector2 offset, float duration = 0f, Action callback = null)
     {
+        if(duration == 0)
+            duration = startDuration;
+
+        this.duration = duration;
+
         this.offset = offset;
         StartCoroutine(DoFade(1f, 0f, callback));
     }

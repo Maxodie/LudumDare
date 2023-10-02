@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3850881995469271674
 MonoBehaviour:
@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   wallCreator: {fileID: 0}
+  startFadeOffset: {x: 0.41, y: 0.48}
+  endFadeOffset: {x: 0.39, y: 0.33}
