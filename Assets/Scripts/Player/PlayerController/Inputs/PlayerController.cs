@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
                     if (hit) targetedObject = hit.transform.gameObject;
                     else
                     {
-                        transform.position += Vector3.right * 1 * Time.deltaTime;
+                        transform.position += Vector3.right * 1 * Time.deltaTime * PlayerStats.instance.walkSpeed.value;
                     }
                 }
                 else if (!iscurrentlymining)
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
             }
 
             miningState.remainingDurability -= (int)PlayerStats.instance.miningpower.value;
-            yield return new WaitForSeconds(PlayerStats.instance.miningRate.value);
+            yield return new WaitForSeconds(1 / PlayerStats.instance.miningRate.value);
 
             if (!isMining)
             {

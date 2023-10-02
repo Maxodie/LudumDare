@@ -21,15 +21,19 @@ public class StatsManager : MonoBehaviour {
 
         statsText.text += "<size=36>Mining Power : <b>" + playerStats.miningpower.value + 
         "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningpower.GetTotalValueByType(ModifierType.ADDITION) + 
-        "</color>), (<color=#4DEA52>+" + playerStats.miningpower.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=5></size>\n";
+        "</color>), (<color=#4DEA52>+" + playerStats.miningpower.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=8></size>\n";
 
-        statsText.text += "<size=36>Mining Power : <b>" + playerStats.miningRate.value + 
+        statsText.text += "<size=36>Mining Rate : <b>" + playerStats.miningRate.value + 
         "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningRate.GetTotalValueByType(ModifierType.ADDITION) + 
-        "</color>), (<color=#4DEA52>+" + playerStats.miningRate.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=4></size>\n";
+        "</color>), (<color=#4DEA52>+" + playerStats.miningRate.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=5></size>\n";
 
         statsText.text += "<size=36>Minerals Per Drop : <b>" + playerStats.miningOreReceived.value + 
         "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningOreReceived.GetTotalValueByType(ModifierType.ADDITION) + 
         "</color>), (<color=#4DEA52>+" + playerStats.miningOreReceived.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=9></size>\n";
+
+        statsText.text += "<size=36>Walk Speed : <b>" + playerStats.walkSpeed.value + 
+        "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.walkSpeed.GetTotalValueByType(ModifierType.ADDITION) + 
+        "</color>), (<color=#4DEA52>+" + playerStats.walkSpeed.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=4></size>\n";
 
     }
 }
