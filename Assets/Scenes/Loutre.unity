@@ -209,6 +209,7 @@ MonoBehaviour:
   canPlay: 0
   iscurrentlymining: 0
   distanceToMine: 2
+  targetedObject: {fileID: 0}
   blockLayerMask:
     serializedVersion: 2
     m_Bits: 0
