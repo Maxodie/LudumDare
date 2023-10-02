@@ -64,6 +64,7 @@ public class WallCreator : MonoBehaviour
         }
 
         columnNumber++;
+        PlayerStats.instance.depth++;
     }
 
     (GameObject, ObjectData) CreateBlock()

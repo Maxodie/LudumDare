@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: Pickaxe_0_Iron_Pickaxe
+  m_Name: Helmet_1_Horn_Helmet
   m_EditorClassIdentifier: 
-  isSpawnAtStart: 1
+  isSpawnAtStart: 0
   isCraftGiveEquipedItem: 1
-  itemGived: {fileID: 11400000, guid: 9a8973d137614cc48a885d763b36c7ee, type: 2}
+  itemGived: {fileID: 11400000, guid: 1f0a8ba62215b4344bbebc55e42bb017, type: 2}
   oreGived: {fileID: 0}
-  oreGivedNumber: 1
-  craftVisual: {fileID: 21300000, guid: c4cfba33332601640a21f0fc5b67d6b1, type: 3}
-  equipementType: 1
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: 56a5dceff91faeb429a117bd213d40d4, type: 3}
+  equipementType: 0
   craftRequiredItems:
   - requiredOre: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
-    requiredNumber: 5
-  - requiredOre: {fileID: 11400000, guid: 596e7625a4e1c1b42b4baa771b6a2caa, type: 2}
+    requiredNumber: 3
+  - requiredOre: {fileID: 11400000, guid: 3bc92b34a58a5c74587d1a631aa0506a, type: 2}
     requiredNumber: 2
-  nextcraft: {fileID: 11400000, guid: 982821ebd9f0d2b4186cd3d0f3d872bf, type: 2}
+  - requiredOre: {fileID: 11400000, guid: 3c0f89ab8fbb7954092f57d4a0f0ac07, type: 2}
+    requiredNumber: 30
+  nextcraft: {fileID: 11400000, guid: d3968ea9a7f01824d95df9f17183ff75, type: 2}

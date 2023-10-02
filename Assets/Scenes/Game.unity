@@ -432,9 +432,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: currentMoneyText
       value: 
       objectReference: {fileID: 538893102884443880}
+    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: miningRateBaseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: miningpowerBaseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: miningMaxTimeBaseStat
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: effectBarGo
       value: 

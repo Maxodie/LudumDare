@@ -15,5 +15,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: c6f03aacef8f6964eb0f9eb24bcc1a2c, type: 3}
   itemName: Copper Plate
   defaultDescription: this copper plate is used in other crafts
-  emoteId: 1
+  emoteId: 6
   price: 6

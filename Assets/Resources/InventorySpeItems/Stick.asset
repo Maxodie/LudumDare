@@ -15,5 +15,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 28c6efe58dd57aa4e9f90680cf3d9355, type: 3}
   itemName: Stick
   defaultDescription: this is a simple stick used in other crafts
-  emoteId: 0
+  emoteId: 9
   price: 0

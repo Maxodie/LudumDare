@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Pickaxe_3_Gold_Pickaxe
+  m_Name: Helmet_1_Horn_Helmet
   m_EditorClassIdentifier: 
   isBoost: 1
   isSpawnAtStart: 0
-  itemName: Gold Pickaxe
-  itemIcon: {fileID: 21300000, guid: 379719d66c4d2544085bf684ab3b15d7, type: 3}
-  cost: 1
-  nextUpgrade: {fileID: 0}
+  itemName: Horn Helmet
+  itemIcon: {fileID: 21300000, guid: 56a5dceff91faeb429a117bd213d40d4, type: 3}
+  cost: 0
+  nextUpgrade: {fileID: 11400000, guid: d539e5feb5bdcb84ba007491274738a3, type: 2}
   itemGived: {fileID: 0}
   itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
   miningRateUpgradeboostAdd: 0
   miningpowerBoostAdd: 0
   miningOreReceivedBoostAdd: 0
-  miningMaxTimeUpgradePercentAdd: 0
+  walkSpeedBoostAdd: 0
+  miningMaxTimeUpgradePercentAdd: 0.1
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 1

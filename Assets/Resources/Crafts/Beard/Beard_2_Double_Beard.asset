@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: Pickaxe_1_Copper_Pickaxe
+  m_Name: Beard_2_Double_Beard
   m_EditorClassIdentifier: 
   isSpawnAtStart: 0
   isCraftGiveEquipedItem: 1
-  itemGived: {fileID: 11400000, guid: 244f66bba7c1de04d816ed3f0ac9e7ea, type: 2}
+  itemGived: {fileID: 11400000, guid: 63ae8f1baa198014e9b1ab8cbcd6f52c, type: 2}
   oreGived: {fileID: 0}
-  oreGivedNumber: 1
-  craftVisual: {fileID: 21300000, guid: 39a32064176492d499831ef784a8025c, type: 3}
-  equipementType: 1
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: 2967d15a604241e48a738a1020957951, type: 3}
+  equipementType: 2
   craftRequiredItems:
-  - requiredOre: {fileID: 11400000, guid: 9790d329b185b8b4e8ffa9803972bab1, type: 2}
-    requiredNumber: 5
   - requiredOre: {fileID: 11400000, guid: 596e7625a4e1c1b42b4baa771b6a2caa, type: 2}
+    requiredNumber: 10
+  - requiredOre: {fileID: 11400000, guid: 0906da3abef4aa94480b86198b01e04d, type: 2}
+    requiredNumber: 4
+  - requiredOre: {fileID: 11400000, guid: 73a267075457fda41a6af2966c6be6a7, type: 2}
     requiredNumber: 2
-  nextcraft: {fileID: 11400000, guid: 81d13a3a1d5cc544da1e935a3c536670, type: 2}
+  nextcraft: {fileID: 11400000, guid: 8d6bfd41dfac1fa4c823f203b5b8750f, type: 2}

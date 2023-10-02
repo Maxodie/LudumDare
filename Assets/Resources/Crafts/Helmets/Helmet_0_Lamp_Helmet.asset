@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
+  m_Name: Helmet_0_Lamp_Helmet
+  m_EditorClassIdentifier: 
+  isSpawnAtStart: 1
+  isCraftGiveEquipedItem: 1
+  itemGived: {fileID: 11400000, guid: bc79be07a92863942b258101e7d4c8a5, type: 2}
+  oreGived: {fileID: 0}
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: ee6a825a530229a47b27ad82559c4934, type: 3}
+  equipementType: 0
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
+    requiredNumber: 3
+  - requiredOre: {fileID: 11400000, guid: 9c4e9a539c1aa52489fde38b302710c9, type: 2}
+    requiredNumber: 1
+  - requiredOre: {fileID: 11400000, guid: 3c0f89ab8fbb7954092f57d4a0f0ac07, type: 2}
+    requiredNumber: 30
+  nextcraft: {fileID: 11400000, guid: 3e276f10f9e55c340a7e829058a634ed, type: 2}

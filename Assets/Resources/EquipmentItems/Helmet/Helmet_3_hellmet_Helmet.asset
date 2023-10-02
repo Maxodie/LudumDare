@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Stick
+  m_Name: Helmet_3_hellmet_Helmet
   m_EditorClassIdentifier: 
-  isBoost: 0
-  isSpawnAtStart: 1
-  itemName: Stick
-  itemIcon: {fileID: 21300000, guid: 28c6efe58dd57aa4e9f90680cf3d9355, type: 3}
-  cost: 10
+  isBoost: 1
+  isSpawnAtStart: 0
+  itemName: Hell'met
+  itemIcon: {fileID: 21300000, guid: 18b0ff5c2342d4c48a2266f59e77b015, type: 3}
+  cost: 0
   nextUpgrade: {fileID: 0}
-  itemGived: {fileID: 11400000, guid: 596e7625a4e1c1b42b4baa771b6a2caa, type: 2}
-  itemGivedNumber: 1
+  itemGived: {fileID: 0}
+  itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
   miningRateUpgradeboostAdd: 0
   miningpowerBoostAdd: 0
   miningOreReceivedBoostAdd: 0
   walkSpeedBoostAdd: 0
-  miningMaxTimeUpgradePercentAdd: 0
+  miningMaxTimeUpgradePercentAdd: 0.1
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0

@@ -15,5 +15,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 86c0fab2076434a43a42f398a478e3f2, type: 3}
   itemName: Gold Plate
   defaultDescription: this gold plate is used in other crafts
-  emoteId: 3
+  emoteId: 8
   price: 6

@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Pickaxe_0_Iron_Pickaxe
+  m_Name: Pickaxe_2_Copper_Pickaxe
   m_EditorClassIdentifier: 
   isBoost: 1
   isSpawnAtStart: 0
-  itemName: Iron Pickaxe
-  itemIcon: {fileID: 21300000, guid: c4cfba33332601640a21f0fc5b67d6b1, type: 3}
-  cost: 0
-  nextUpgrade: {fileID: 0}
+  itemName: Copper Pickaxe
+  itemIcon: {fileID: 21300000, guid: 39a32064176492d499831ef784a8025c, type: 3}
+  cost: 1
+  nextUpgrade: {fileID: 11400000, guid: 2ecfb5867a6889446823d45c38cef0d3, type: 2}
   itemGived: {fileID: 0}
   itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
-  miningRateUpgradeboostAdd: 0
-  miningpowerBoostAdd: 0
+  miningRateUpgradeboostAdd: 0.1
+  miningpowerBoostAdd: 1
   miningOreReceivedBoostAdd: 0
+  walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 0

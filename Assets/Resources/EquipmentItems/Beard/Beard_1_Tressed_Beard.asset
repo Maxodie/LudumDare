@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Pickaxe_2_Silver_Pickaxe
+  m_Name: Beard_1_Tressed_Beard
   m_EditorClassIdentifier: 
   isBoost: 1
   isSpawnAtStart: 0
-  itemName: Silver Pickaxe
-  itemIcon: {fileID: 21300000, guid: 75adda04e58591d4881e41d80c31019c, type: 3}
-  cost: 1
-  nextUpgrade: {fileID: 0}
+  itemName: Tressed Beard
+  itemIcon: {fileID: 21300000, guid: 771153b0a0b243b43891d0d16e6f14dc, type: 3}
+  cost: 0
+  nextUpgrade: {fileID: 11400000, guid: 63ae8f1baa198014e9b1ab8cbcd6f52c, type: 2}
   itemGived: {fileID: 0}
   itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
-  miningRateUpgradeboostAdd: 0
+  miningRateUpgradeboostAdd: 0.1
   miningpowerBoostAdd: 0
   miningOreReceivedBoostAdd: 0
+  walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 0
