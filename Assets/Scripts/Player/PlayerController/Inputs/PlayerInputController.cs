@@ -6,7 +6,7 @@ public class PlayerInputController : MonoBehaviour
 {
     PlayerInputs playerInputs;
     
-    Animator amin;
+    [SerializeField] Animator amin;
     WaitForSeconds wait;
 
     [SerializeField] AnimationClip miningAnim;
@@ -14,7 +14,6 @@ public class PlayerInputController : MonoBehaviour
     bool canCancelMining = true;
 
     void Awake() {
-        amin = PlayerAnimationController.instance.animator;
         wait = new WaitForSeconds(miningAnim.length/2);
     }
 

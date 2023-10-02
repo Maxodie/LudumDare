@@ -10133,7 +10133,7 @@ Transform:
   - {fileID: 4662742846010752490}
   - {fileID: 2333629644612768944}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3256614010086331603
 Animator:
@@ -10188,11 +10188,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallCreator: {fileID: 0}
+  playerAnimController: {fileID: 2196853393282518550}
+  effectBarGo: {fileID: 0}
+  effectBarMat: {fileID: 2100000, guid: d3289a34e0c976745b39ced221a1096f, type: 2}
   raycastOrigin: {fileID: 4107072533303272388}
   isMining: 0
   iscurrentlymining: 0
   distanceToMine: 2
   targetedObject: {fileID: 0}
+  blockLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  inventoryManager: {fileID: 0}
+  particleMaterial: {fileID: 0}
 --- !u!114 &4079481257367686244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10205,6 +10213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647ac9244e93b5d4e971e31950ac667e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amin: {fileID: 3256614010086331603}
+  miningAnim: {fileID: 7400000, guid: 215ba308bb824fa4cac8a0c20423a628, type: 2}
 --- !u!114 &722228921506711175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10249,7 +10259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3256614010086331603}
   particle: {fileID: 5107999755297645525}
-  TimeBetweenEachAnim: 5
+  timeBetweenEachAnim: 10
+  timer: 0
 --- !u!50 &1371329074360126801
 Rigidbody2D:
   serializedVersion: 4
