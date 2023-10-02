@@ -70,13 +70,29 @@ public class PlayerAnimationController : MonoBehaviour
         else if (randomIndex < 35)
         {
             animator.SetInteger("indexIdle", 2);
-            animator.SetBool("IsSleeping", true);
         }
         else
             animator.SetInteger("indexIdle", 3);
 
 
         animator.SetTrigger("StartIdle");
+
+    }
+
+    public void DoMiningAnim()
+    {
+        int randomIndex = Random.Range(0, 50);
+        if (randomIndex < 25)
+        {
+            animator.SetInteger("IndexMining", 0);
+        }
+        else
+        {
+            animator.SetInteger("IndexMining", 1);
+        }
+
+
+        animator.SetTrigger("StartMining");
 
     }
 
@@ -96,5 +112,10 @@ public class PlayerAnimationController : MonoBehaviour
         if (tomb == null)
             tomb = Instantiate(tombPrefab);
         tomb.transform.position = new Vector3(transform.position.x, tomb.transform.position.y);
+    }
+
+    public void ActiveIsSleeping()
+    {
+        animator.SetBool("IsSleeping", true);
     }
 }
