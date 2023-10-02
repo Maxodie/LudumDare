@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: 0IronPlateCraft
+  m_Name: Plate_0_IronPlateCraft
   m_EditorClassIdentifier: 
   isSpawnAtStart: 1
   isCraftGiveEquipedItem: 0
@@ -18,7 +18,7 @@ MonoBehaviour:
   oreGived: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
   oreGivedNumber: 1
   craftVisual: {fileID: 21300000, guid: 80c2e6091384a7a4db85c474bc71e9bc, type: 3}
-  equipementType: 5
+  equipementType: 6
   craftRequiredItems:
   - requiredOre: {fileID: 11400000, guid: 724c56adbd7452844a85e56cca49ea3f, type: 2}
     requiredNumber: 2

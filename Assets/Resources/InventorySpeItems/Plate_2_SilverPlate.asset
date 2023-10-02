@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d68e19a2430fc5f4b958b9cb0238cbbd, type: 3}
-  m_Name: 0IronPlate
+  m_Name: Plate_2_SilverPlate
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 80c2e6091384a7a4db85c474bc71e9bc, type: 3}
-  itemName: Iron Plate
-  defaultDescription: this iron plate is used in other crafts
-  emoteId: 0
+  icon: {fileID: 21300000, guid: 38be6f6cf1d9709499434055d90cb544, type: 3}
+  itemName: Silver Plate
+  defaultDescription: this silver plate is used in other crafts
+  emoteId: 2
   price: 6
