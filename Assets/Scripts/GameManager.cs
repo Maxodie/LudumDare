@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
+    [SerializeField] CircleWipeController circleWipeController;
     [SerializeField] PlayerController playerController;
     [SerializeField] WallCreator wallCreator;
     [SerializeField] Vector2 startFadeOffset;
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void StartParty() {
-        CircleWipeController.instance.FadeOut(startFadeOffset);
+        circleWipeController.FadeOut(startFadeOffset);
         playerController.ResetPlayer();
 
         wallCreator.StartGeneration();
