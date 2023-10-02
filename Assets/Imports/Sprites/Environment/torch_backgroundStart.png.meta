@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4cd274216af705c44ba9aa436d10f881
+guid: b8bd26919d4fba840afdf2208aed0559
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plateIcons_0
+      name: torch_backgroundStart_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 16
-        height: 16
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c4962fdbdeddf4db0bb42e8bb30ed7
-      internalID: 168510978
+      spriteID: abe27b8b560f8314492aa8832490ed48
+      internalID: -767880719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plateIcons_1
+      name: torch_backgroundStart_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b50b78402c3e3be418ffebe62c1242a3
-      internalID: 262945818
+      spriteID: ac6eb8a7c52d9c54b805ebed119077bc
+      internalID: -39887304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plateIcons_2
+      name: torch_backgroundStart_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77931a4a9b9b7e143bb15340338dcfa7
-      internalID: -677768618
+      spriteID: d68876fedb3238644853e715079996f4
+      internalID: -248093360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plateIcons_3
+      name: torch_backgroundStart_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8229371c3e5ab7e4a90ef61c9db8b61b
-      internalID: -925014232
+      spriteID: f92c26eb01b4b144ba7cf21bd5f4c738
+      internalID: 325463361
       vertices: []
       indices: 
       edges: []
@@ -213,10 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plateIcons_0: 168510978
-      plateIcons_1: 262945818
-      plateIcons_2: -677768618
-      plateIcons_3: -925014232
+      torch_backgroundStart_0: -767880719
+      torch_backgroundStart_1: -39887304
+      torch_backgroundStart_2: -248093360
+      torch_backgroundStart_3: 325463361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
