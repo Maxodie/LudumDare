@@ -6,6 +6,8 @@ public class PlayerSoundManager : MonoBehaviour
 {
     [SerializeField] RandomSound pickaxeSound;
     [SerializeField] RandomSound tombSound;
+    [SerializeField] RandomSound rockFallSound;
+    [SerializeField] RandomSound scratchingSound;
 
     public void PlayPickSound()
     {
@@ -15,5 +17,15 @@ public class PlayerSoundManager : MonoBehaviour
     public void PlayTombFallingSound()
     {
         tombSound.PlayRandomSound();
+    }
+
+    public void PlayRockFallSound()
+    {
+        rockFallSound.PlayRandomSound();
+    }
+
+    public void PlayScrachingSound()
+    {
+        scratchingSound.PlayRandomSound();
     }
 }
