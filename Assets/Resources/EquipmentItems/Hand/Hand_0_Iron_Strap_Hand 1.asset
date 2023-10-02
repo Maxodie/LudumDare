@@ -10,16 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Alter
+  m_Name: Hand_0_Iron_Strap_Hand 1
   m_EditorClassIdentifier: 
+  isBoost: 0
   isSpawnAtStart: 1
   itemName: 
-  itemIcon: {fileID: 21300000, guid: 103ffd2dcf52f324593df1ab55008113, type: 3}
+  itemIcon: {fileID: 0}
   cost: 0
   nextUpgrade: {fileID: 0}
+  itemGived: {fileID: 0}
+  itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
   miningRateUpgradeboostAdd: 0
   miningpowerBoostAdd: 0
+  miningOreReceivedBoostAdd: 0
+  walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
+  miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 0
