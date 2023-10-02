@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
             Destroy(this);
 
         effectBarGo.SetActive(false);
+        startPos = transform.position;
     }
     
     private void Update()
