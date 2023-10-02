@@ -11,9 +11,12 @@ public class CraftItemUI : MonoBehaviour {
     [SerializeField] TMP_Text textDescription;
     [SerializeField] TMP_Text textPrice;
 
-    public void LoadCraftUI(CraftScriptableObject craft, CraftManager craftManager) {
+    AudioSource audioSource;
+
+    public void LoadCraftUI(CraftScriptableObject craft, CraftManager craftManager, AudioSource audioSource) {
         this.craft = craft;
         this.craftManager = craftManager;
+        this.audioSource = audioSource;
 
         icon.sprite = craft.craftVisual;
 
@@ -31,6 +34,8 @@ public class CraftItemUI : MonoBehaviour {
     }
 
     public void CraftItem() {
+        audioSource.Play();
+
         if(!craftManager.OnCraft(craft, this)) {
             NotificationSystem.instance.MakeNotif(new Color(255, 150, 150), "Not enough resources to craft it");
         }

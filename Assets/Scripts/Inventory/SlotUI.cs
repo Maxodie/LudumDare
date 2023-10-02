@@ -12,6 +12,8 @@ public class SlotUI : MonoBehaviour {
 
     SlotStack currentSlotStack;
 
+    [SerializeField] AudioSource audioSource;
+
     void Awake() {
         currentSlotStack = new SlotStack();
 
@@ -63,6 +65,8 @@ public class SlotUI : MonoBehaviour {
     //used on sell mode activated
     public void OnClick() {
         if(!sellOreSystem.sellMode) return;
+
+        audioSource.Play();
 
         if(!currentSlotStack.item) {
             sellOreSystem.OnEndSellMode();

@@ -10,6 +10,8 @@ public class ShopManager : MonoBehaviour {
 
     List<ShopItemUI> shopItemUI = new List<ShopItemUI>();
 
+    [SerializeField] AudioSource audioSource;
+
     void Start() {
         LoadShopItems();
     }
@@ -25,7 +27,7 @@ public class ShopManager : MonoBehaviour {
         ShopItemUI shopItem_ = Instantiate(shopItemUIPrefab, spawnItemPos).GetComponent<ShopItemUI>();
         spawnItemPos.GetChild(spawnItemPos.childCount-1).SetSiblingIndex(siblingId);
 
-        shopItem_.LoadShopUI(shopItem, this);
+        shopItem_.LoadShopUI(shopItem, this, audioSource);
 
         shopItemUI.Add(shopItem_);
     }
