@@ -435,26 +435,6 @@ PrefabInstance:
       propertyPath: currentMoneyText
       value: 
       objectReference: {fileID: 538893102884443880}
-    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: walkSpeedBaseStat
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: miningRateBaseStat
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: miningpowerBaseStat
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: miningMaxTimeBaseStat
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: miningOreReceivedBaseStat
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8483169032861681871, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: effectBarGo
       value: 
@@ -659,10 +639,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 365191159}
     - target: {fileID: 3850881995469271674, guid: cdadef3303ff3b245abba74e8330737f, type: 3}
-      propertyPath: environnementManagers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850881995469271674, guid: cdadef3303ff3b245abba74e8330737f, type: 3}
       propertyPath: environnementManagers.Array.data[0]
       value: 
       objectReference: {fileID: 1903957118}
@@ -679,8 +655,7 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6348237328476613272, guid: cdadef3303ff3b245abba74e8330737f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdadef3303ff3b245abba74e8330737f, type: 3}
