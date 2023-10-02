@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: WoodPicaxe 1
+  m_Name: Helmet_1_lightHelmet
   m_EditorClassIdentifier: 
   isBoost: 0
   isSpawnAtStart: 1
-  itemName: 
-  itemIcon: {fileID: 21300000, guid: 53189682580a8ef4a90c4650ccec4cd1, type: 3}
+  itemName: HelmetLamp
+  itemIcon: {fileID: 21300000, guid: ee6a825a530229a47b27ad82559c4934, type: 3}
   cost: 0
   nextUpgrade: {fileID: 0}
-  itemGived: {fileID: 11400000, guid: 9790d329b185b8b4e8ffa9803972bab1, type: 2}
-  itemGivedNumber: 2
-  miningMaxTimeUpgradeboostAdd: 0
+  itemGived: {fileID: 0}
+  itemGivedNumber: 0
+  miningMaxTimeUpgradeboostAdd: 1
   miningRateUpgradeboostAdd: 0
   miningpowerBoostAdd: 0
   miningOreReceivedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
-  miningRateUpgradePercentAdd: 0
+  miningRateUpgradePercentAdd: 0.5
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
