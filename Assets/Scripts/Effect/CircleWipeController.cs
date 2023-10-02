@@ -44,7 +44,6 @@ public class CircleWipeController : MonoBehaviour
     {
         radius = start;
         UpdateShader();
-        Debug.Log("tejst");
 
         var time = 0f;
         while (time < 1f)
@@ -53,7 +52,6 @@ public class CircleWipeController : MonoBehaviour
             time += Time.deltaTime / duration;
             UpdateShader();
             yield return null;
-            Debug.Log("test");
         }
 
         radius = end;
