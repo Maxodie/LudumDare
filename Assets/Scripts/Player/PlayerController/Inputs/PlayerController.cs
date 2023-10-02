@@ -16,6 +16,17 @@ public class PlayerController : MonoBehaviour
 
     MiningState miningState;
 
+<<<<<<< Updated upstream
+=======
+    [SerializeField] LayerMask blockLayerMask;
+
+    [SerializeField] InventoryManager inventoryManager;
+    [SerializeField] Material particleMaterial;
+
+    public GameObject infotext;
+
+
+>>>>>>> Stashed changes
     private void Awake()
     {
         if (instance == null)
@@ -39,6 +50,18 @@ public class PlayerController : MonoBehaviour
             if (spaceBarTimer > 0f)
             {
                 spaceBarTimer -= Time.deltaTime;
+<<<<<<< Updated upstream
+=======
+
+                if (!effectBarGo.activeSelf)
+                {
+                    infotext.SetActive(false);
+                    effectBarGo.SetActive(true);
+                }
+                
+                effectBarMat.SetFloat("_HealthAmout", spaceBarTimer / PlayerStats.instance.miningMaxTime.value);
+
+>>>>>>> Stashed changes
                 if (targetedObject == null)
                 {
                     RaycastHit2D hit;
@@ -56,6 +79,14 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+<<<<<<< Updated upstream
+=======
+        else if (effectBarGo.activeSelf)
+        {
+            infotext.SetActive(true);
+            effectBarGo.SetActive(false);
+        }
+>>>>>>> Stashed changes
         
     }
 

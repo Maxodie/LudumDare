@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: cb375c9387299204986cf30d8e11ba6d
 NativeFormatImporter:
   externalObjects: {}
+<<<<<<< Updated upstream:Assets/Animation/Death.anim.meta
   mainObjectFileID: 7400000
+=======
+  mainObjectFileID: 0
+>>>>>>> Stashed changes:Assets/Resources/CraftDataBase.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

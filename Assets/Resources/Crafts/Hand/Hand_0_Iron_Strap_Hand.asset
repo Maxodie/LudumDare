@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
+  m_Name: Hand_0_Iron_Strap_Hand
+  m_EditorClassIdentifier: 
+  isSpawnAtStart: 1
+  isCraftGiveEquipedItem: 1
+  itemGived: {fileID: 11400000, guid: 6688b7256c40c914884d558092fcfbd6, type: 2}
+  oreGived: {fileID: 0}
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: f6091d21ba92d1f439094705fc45aa65, type: 3}
+  equipementType: 5
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 724c56adbd7452844a85e56cca49ea3f, type: 2}
+    requiredNumber: 5
+  - requiredOre: {fileID: 11400000, guid: 3c0f89ab8fbb7954092f57d4a0f0ac07, type: 2}
+    requiredNumber: 10
+  nextcraft: {fileID: 11400000, guid: 992a0fab352e1c549bacbdef25aca742, type: 2}

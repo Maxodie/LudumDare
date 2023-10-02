@@ -12,9 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
   m_Name: gold_ore
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Resources/Ores_data/gold_ore.asset
   prefab: {fileID: 0}
   icon: {fileID: 0}
   name: Gold
   hardness: 30
   rarity: 3
   price: 30
+=======
+  crafts:
+  - {fileID: 11400000, guid: bc18655376790db41ac36ffb6297cfe8, type: 2}
+  - {fileID: 11400000, guid: 2751ee21207c73a4ba37e3574ae2cbc3, type: 2}
+  - {fileID: 11400000, guid: 493f60686a24514419604e83f2340458, type: 2}
+  - {fileID: 11400000, guid: 8d6bfd41dfac1fa4c823f203b5b8750f, type: 2}
+  - {fileID: 11400000, guid: 30c377ef60a82704cb01ce540a267185, type: 2}
+  - {fileID: 11400000, guid: 992a0fab352e1c549bacbdef25aca742, type: 2}
+  - {fileID: 11400000, guid: a3503dc6c001ea8459d6a9f3028c4e6b, type: 2}
+  - {fileID: 11400000, guid: 716f65fbb47a9fc45bacc87ef1ff8fd2, type: 2}
+  - {fileID: 11400000, guid: fabaf7f2c960aa840856e140bf65b27b, type: 2}
+  - {fileID: 11400000, guid: 3e276f10f9e55c340a7e829058a634ed, type: 2}
+  - {fileID: 11400000, guid: d3968ea9a7f01824d95df9f17183ff75, type: 2}
+  - {fileID: 11400000, guid: 4a818e6b5a847114c90a26d7b89a1363, type: 2}
+  - {fileID: 11400000, guid: 9f8330659a00d6a42b16ba71797a71dc, type: 2}
+  - {fileID: 11400000, guid: f143a73ca6f930948be6d1ae340cbd45, type: 2}
+  - {fileID: 11400000, guid: 982821ebd9f0d2b4186cd3d0f3d872bf, type: 2}
+  - {fileID: 11400000, guid: 81d13a3a1d5cc544da1e935a3c536670, type: 2}
+  - {fileID: 11400000, guid: f1462e2bd37970541b0a5f5569ae7841, type: 2}
+  - {fileID: 11400000, guid: 5e22f3f8c64f0624c847ba172b4d8648, type: 2}
+  - {fileID: 11400000, guid: 6ec9c2ca441f3d944a65025c7a02a070, type: 2}
+  - {fileID: 11400000, guid: cf22ae0bcdda9144588263b2885d9ce2, type: 2}
+  - {fileID: 11400000, guid: 17abe8ef16008c142a810feb090f9533, type: 2}
+>>>>>>> Stashed changes:Assets/Resources/CraftDataBase.asset

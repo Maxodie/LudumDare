@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: c81475ceec4831945bd80d7aca053bc3
 NativeFormatImporter:
   externalObjects: {}
+<<<<<<< Updated upstream:Assets/Animation/Idle1.anim.meta
   mainObjectFileID: 7400000
+=======
+  mainObjectFileID: 0
+>>>>>>> Stashed changes:Assets/Resources/ShopItemDataBase.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
