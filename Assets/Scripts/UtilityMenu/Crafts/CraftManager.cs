@@ -10,6 +10,8 @@ public class CraftManager : MonoBehaviour {
     [SerializeField] GameObject craftUIPrefab;
     List<CraftItemUI> craftItemUI = new List<CraftItemUI>();
 
+    [SerializeField] AudioSource audioSource;
+
     void Awake() {
         LoadCrafts();
     }
@@ -25,7 +27,7 @@ public class CraftManager : MonoBehaviour {
         CraftItemUI craftItem_ = Instantiate(craftUIPrefab, craftUISpanwnPoint).GetComponent<CraftItemUI>();
         craftUISpanwnPoint.GetChild(craftUISpanwnPoint.childCount-1).SetSiblingIndex(siblingId);
 
-        craftItem_.LoadCraftUI(craftData, this);
+        craftItem_.LoadCraftUI(craftData, this, audioSource);
 
         craftItemUI.Add(craftItem_);
     }
