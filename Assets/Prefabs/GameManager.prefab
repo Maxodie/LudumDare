@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3850881995469271674
 MonoBehaviour:
@@ -50,3 +50,7 @@ MonoBehaviour:
   startFadeOffset: {x: 0.35, y: 0.42}
   endFadeOffset: {x: 0.34, y: 0.25}
   audioMixer: {fileID: 24100000, guid: 4f54d7cef632c414a9b8a998da41bb5d, type: 2}
+  environnementManagers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
