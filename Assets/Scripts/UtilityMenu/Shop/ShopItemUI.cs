@@ -11,9 +11,12 @@ public class ShopItemUI : MonoBehaviour {
     [SerializeField] TMP_Text textDescription;
     [SerializeField] TMP_Text textPrice;
 
-    public void LoadShopUI(ShopItemScriptableObject shopItem, ShopManager shopManager) {
+    AudioSource audioSource;
+
+    public void LoadShopUI(ShopItemScriptableObject shopItem, ShopManager shopManager, AudioSource audioSource) {
         this.shopItem = shopItem;
         this.shopManager = shopManager;
+        this.audioSource = audioSource;
 
         icon.sprite = shopItem.itemIcon;
         textTitle.text = shopItem.itemName;
@@ -23,6 +26,8 @@ public class ShopItemUI : MonoBehaviour {
     }
 
     public void BuyBtn() {
+        audioSource.Play();
+
         if(PlayerStats.instance.UpdateMoney(-shopItem.cost))
             shopManager.BuyItem(shopItem, this);
         else

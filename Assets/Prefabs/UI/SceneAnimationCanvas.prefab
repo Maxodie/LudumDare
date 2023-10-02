@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4370388611440206636}
   - component: {fileID: 2129594347903651018}
   - component: {fileID: 51845794291097631}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: SceneAnimationCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 1846010972080035658}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 616991627127450662}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 2999
   m_TargetDisplay: 0
 --- !u!114 &2129594347903651018
 MonoBehaviour:
@@ -116,7 +116,8 @@ GameObject:
   - component: {fileID: 355952212671641393}
   - component: {fileID: 5087493746160250120}
   - component: {fileID: 3332367004049557203}
-  m_Layer: 5
+  - component: {fileID: 6646385397201185101}
+  m_Layer: 7
   m_Name: BlackScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +142,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 980}
+  m_SizeDelta: {x: 1820, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8948372635789711165
 CanvasRenderer:
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c073dbc9f6bb544cb9b36275caa1980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: -876546973899608171, guid: b08f9dbd9c90a564ea64254f04c16397, type: 3}
+  material: {fileID: 2100000, guid: 5a82692325aa6e94586a2b6e16cf7144, type: 2}
   radius: 0
   offset: {x: 0.33, y: 0.3}
   duration: 0.7
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: -876546973899608171, guid: b08f9dbd9c90a564ea64254f04c16397, type: 3}
+  m_Material: {fileID: 2100000, guid: 5a82692325aa6e94586a2b6e16cf7144, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -210,6 +211,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6646385397201185101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183228553256024165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!1 &6520897874265840708
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846010972080035658}
   - component: {fileID: 5940357803934059044}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}

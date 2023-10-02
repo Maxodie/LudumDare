@@ -10,7 +10,6 @@ using UnityEngine;
 /// </summary>
 public class CircleWipeController : MonoBehaviour
 {
-    public static CircleWipeController instance;
 
     [SerializeField] Material material;
 
@@ -23,8 +22,6 @@ public class CircleWipeController : MonoBehaviour
 
     void Awake()
     {
-        if(!instance) instance = this;
-        else Destroy(gameObject);
 
         startDuration = duration;
         UpdateShader();

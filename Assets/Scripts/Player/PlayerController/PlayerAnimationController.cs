@@ -3,9 +3,11 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     public Animator animator;
+    [SerializeField] bool isMainMenu = false;
     public PlayerController controller;
 
     [SerializeField] GameObject tombPrefab;
+    [SerializeField] CircleWipeController circleWipeController;
     GameObject tomb;
 
     [SerializeField] ParticleSystem breakingParticle;
@@ -27,7 +29,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     //Called in death annimation
     public void FadeInEndScreen() {
-        CircleWipeController.instance.FadeIn(GameManager.instance.endFadeOffset, 2f);
+        circleWipeController.FadeIn(GameManager.instance.endFadeOffset, 2f);
     }
 
     public void ReactivePlayMode() {
@@ -42,7 +44,7 @@ public class PlayerAnimationController : MonoBehaviour
             timer = 0f;
         }
 
-        if (controller.targetedObject != null)
+        if (!isMainMenu && controller.targetedObject != null)
             animator.SetFloat("MiningSpeed", PlayerStats.instance.miningRate.value);
     }
 

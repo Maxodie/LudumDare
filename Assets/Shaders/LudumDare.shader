@@ -7,7 +7,7 @@ Shader"Unlit/NewUnlitShader"
     {
         _StartColor ("Low Health Color",Color) = (0,0,0,0)
         _EndColor ("Full Health Color",Color) = (0,0,0,0)
-        _BackgroundTex ("background Color",2D) = "white" {}
+        _BackgroundTex ("background",2D) = "white" {}
         _Sprite ("Sprite", 2D) = "white" {}
         _HealthAmout ("Health",range(0,1)) = 0
         _YOffset ("YOffset",range(0,.5)) = 0
@@ -76,7 +76,7 @@ Shader"Unlit/NewUnlitShader"
                 float4 t = tex2D(_Sprite, i.uv);
                 
                 float2 backgroundXY = i.uv;
-                backgroundXY.x = frac(backgroundXY.x /16 * 100);
+                backgroundXY.x = frac(backgroundXY.x);
 
                 float4 backgroundColor = tex2D(_BackgroundTex, backgroundXY);
 
