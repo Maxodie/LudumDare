@@ -202,6 +202,7 @@ MonoBehaviour:
   raycastOrigin: {fileID: 1281067622}
   isMining: 0
   iscurrentlymining: 0
+  distanceToMine: 2
   targetedObject: {fileID: 0}
 --- !u!114 &1202634818
 MonoBehaviour:
@@ -218,7 +219,9 @@ MonoBehaviour:
   miningMaxTimeBaseStat: 50
   miningRateBaseStat: 1
   miningpowerBaseStat: 1
-  currenMoney: 0
+  miningOreReceivedBaseStat: 1
+  currentMoney: 0
+  currentMoneyText: {fileID: 0}
   depth: 1
 --- !u!212 &1202634819
 SpriteRenderer:
