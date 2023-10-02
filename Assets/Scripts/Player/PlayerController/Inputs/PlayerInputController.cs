@@ -7,6 +7,7 @@ public class PlayerInputController : MonoBehaviour
     PlayerInputs playerInputs;
     
     [SerializeField] Animator amin;
+    [SerializeField] PlayerAnimationController playerAnimationController;
     WaitForSeconds wait;
 
     [SerializeField] AnimationClip miningAnim;
@@ -36,7 +37,12 @@ public class PlayerInputController : MonoBehaviour
         amin.SetBool("isMining", true);
         amin.ResetTrigger("StartIdle");
 
-        StartCoroutine(CheckMinimumMiningTime());
+        if (canCancelMining)
+        {
+            playerAnimationController.DoMiningAnim();
+
+            StartCoroutine(CheckMinimumMiningTime(amin.GetCurrentAnimatorClipInfo(0).Length));
+        }
     }
 
     public void StopMining(InputAction.CallbackContext context)
@@ -48,13 +54,14 @@ public class PlayerInputController : MonoBehaviour
     
         if(canCancelMining) {
             amin.SetBool("isMining", false);
+            amin.ResetTrigger("StartMining");
         }
     }
 
-    IEnumerator CheckMinimumMiningTime() {
+    IEnumerator CheckMinimumMiningTime(float wait) {
         canCancelMining = false;
 
-        yield return wait;
+        yield return new WaitForSeconds(wait);
 
         if(!PlayerController.instance.isMining)
             amin.SetBool("isMining", false);
