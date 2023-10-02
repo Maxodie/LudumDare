@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
-    public static PlayerAnimationController instance;
-
     public Animator animator;
 
     [SerializeField] ParticleSystem particle;
@@ -12,18 +10,14 @@ public class PlayerAnimationController : MonoBehaviour
 
     public float timer = 0f;
 
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(this);
-    }
-
     void Start() {
         animator = GetComponent<Animator>();
-        
+
         DoIdleAnim();
+    }
+
+    public void ResetAnim() {
+        animator.SetBool("IsDeath", false);
     }
 
     void Update() {
@@ -56,5 +50,9 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetInteger("indexIdle", 3);
 
         animator.SetTrigger("StartIdle");
+    }
+
+    public void OnDeath() {
+        animator.SetBool("IsDeath", true);
     }
 }

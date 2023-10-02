@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,10 +6,13 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     [SerializeField] WallCreator wallCreator;
 
+    [SerializeField] PlayerAnimationController playerAnimController;
+
     [SerializeField] GameObject effectBarGo;
     [SerializeField] Material effectBarMat;
 
     public Transform raycastOrigin;
+    Vector2 startPos;
 
     public bool isMining;
     public bool iscurrentlymining;
@@ -38,20 +40,32 @@ public class PlayerController : MonoBehaviour
 
         effectBarGo.SetActive(false);
     }
-
-    private void Start()
-    {
-        ResetSpaceBarTimer();
-    }
-
-    public void ResetSpaceBarTimer()
-    {
-        spaceBarTimer = PlayerStats.instance.miningMaxTime.value;
-    }
-
+    
     private void Update()
     {
         MiningControl();
+    }
+
+    public void ResetPlayer()
+    {
+        spaceBarTimer = PlayerStats.instance.miningMaxTime.value;
+        PlayerStats.instance.depth = 0;
+        transform.position = startPos;
+        isMining = false;
+
+        playerAnimController.ResetAnim();
+    }
+
+    public void Respawn() {
+        GameManager.instance.EndParty();
+    }
+
+    public void PlayerDeath() {
+        iscurrentlymining = false;
+        playerAnimController.OnDeath();
+        targetedObject = null;
+
+        StopAllCoroutines();
     }
 
     void MiningControl() {
@@ -81,6 +95,9 @@ public class PlayerController : MonoBehaviour
                     iscurrentlymining = true;
                     StartCoroutine(MiningCoroutine(targetedObject.transform.GetComponent<ObjectData>().objectData));
                 }
+            }
+            else {
+                PlayerDeath();
             }
         }
         else if(effectBarGo.activeSelf)
@@ -116,7 +133,8 @@ public class PlayerController : MonoBehaviour
 
             miningState.remainingDurability -= (int)PlayerStats.instance.miningpower.value;
             yield return new WaitForSeconds(PlayerStats.instance.miningRate.value);
-            if (spaceBarTimer < 0f || !isMining)
+
+            if (!isMining)
             {
                 iscurrentlymining = false;
                 yield break;
@@ -133,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
         if (!blockBelow) wallCreator.CreateWall();
 
-        Destroy(targetedObject.transform.gameObject);
+        Destroy(targetedObject);
         
         if (blockBelow != null)
         {

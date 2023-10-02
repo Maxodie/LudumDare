@@ -7,7 +7,6 @@ public class WallCreator : MonoBehaviour
     OresGeneration oreGenerator;
     [SerializeField] GameObject blockPrefab;
 
-    Vector2 startPosition;
     GameObject previousCreatedBlock;
     float columnNumber = 0;
     int blockInColumn = 0;
@@ -18,11 +17,9 @@ public class WallCreator : MonoBehaviour
     void Awake()
     {
         oreGenerator = GetComponent<OresGeneration>();
-        startPosition = transform.position;
     }
 
-    void Start()
-    {
+    public void StartGeneration() {
         CreateWalls(wallNumberAtStart);
     }
 
@@ -88,7 +85,7 @@ public class WallCreator : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-            Destroy(transform.GetChild(0));
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 }
