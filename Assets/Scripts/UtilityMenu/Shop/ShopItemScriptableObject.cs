@@ -17,10 +17,12 @@ public class ShopItemScriptableObject : ScriptableObject {
     public float miningRateUpgradeboostAdd;
     public int miningpowerBoostAdd;
     public int miningOreReceivedBoostAdd;
+    public int walkSpeedBoostAdd;
 
     [Header("Percent Add")]
     public float miningMaxTimeUpgradePercentAdd;
     public float miningRateUpgradePercentAdd;
     public int miningpowerPercentAdd;
     public int miningOreReceivedPercentAdd;
+    public int walkSpeedPercentAdd;
 }

@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
                     if (hit) targetedObject = hit.transform.gameObject;
                     else
                     {
-                        transform.position += Vector3.right * 1 * Time.deltaTime;
+                        transform.position += Vector3.right * 1 * Time.deltaTime * PlayerStats.instance.walkSpeed.value;
                     }
                 }
                 else if (!iscurrentlymining)
