@@ -12,11 +12,10 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Start() {
         animator = GetComponent<Animator>();
-
-        DoIdleAnim();
     }
 
     public void ResetAnim() {
+        timer = 0f;
         animator.SetBool("IsDeath", false);
         animator.SetTrigger("Spawn");
     }
@@ -61,7 +60,9 @@ public class PlayerAnimationController : MonoBehaviour
         else
             animator.SetInteger("indexIdle", 3);
 
+        animator.SetInteger("indexIdle", 2);
         animator.SetTrigger("StartIdle");
+
     }
 
     public void OnDeath() {
