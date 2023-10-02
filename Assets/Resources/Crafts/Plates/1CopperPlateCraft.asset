@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
+  m_Name: 1CopperPlateCraft
+  m_EditorClassIdentifier: 
+  isSpawnAtStart: 1
+  isCraftGiveEquipedItem: 0
+  itemGived: {fileID: 0}
+  oreGived: {fileID: 11400000, guid: 9790d329b185b8b4e8ffa9803972bab1, type: 2}
+  oreGivedNumber: 1
+  craftVisual: {fileID: 21300000, guid: c6f03aacef8f6964eb0f9eb24bcc1a2c, type: 3}
+  equipementType: 5
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 9c4e9a539c1aa52489fde38b302710c9, type: 2}
+    requiredNumber: 2
+  nextcraft: {fileID: 11400000}
