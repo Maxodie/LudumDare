@@ -5306,7 +5306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2033595703187276408
 Transform:
   m_ObjectHideFlags: 0
@@ -10205,11 +10205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d8c0f8f5e8fa84c91eb1dd472e7150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miningMaxTimeBaseStat: 5
-  miningRateBaseStat: 1
-  miningpowerBaseStat: 1
-  miningOreReceivedBaseStat: 1
-  walkSpeedBaseStat: 1
+  miningMaxTimeBaseStat: 10
+  miningRateBaseStat: 200
+  miningpowerBaseStat: 150
+  miningOreReceivedBaseStat: 25
+  walkSpeedBaseStat: 25
   currentMoney: 0
   currentMoneyText: {fileID: 0}
   depth: 1

@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] AudioMixer audioMixer;
 
+    public EnvironnementManager[] environnementManagers;
+
     void Awake() {
         if(!instance) instance = this;
         else Destroy(gameObject);
@@ -36,6 +38,16 @@ public class GameManager : MonoBehaviour {
     public void EndParty() {
         wallCreator.ResetWall();
 
+        ResetEnvironnement();
+
         StartParty();
+    }
+
+    public void ResetEnvironnement()
+    {
+        foreach (EnvironnementManager manager in environnementManagers)
+        {
+            manager.ResetEnvironnement();
+        }
     }
 }
