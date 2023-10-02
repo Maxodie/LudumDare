@@ -4042,10 +4042,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2196853393282518550, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: tombPrefab
-      value: 
-      objectReference: {fileID: 3001508238564428194, guid: 67e2ffba5cf7dfa43a099e89c708606f, type: 3}
     - target: {fileID: 3037496749829980798, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4090,14 +4086,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5733519603935598749, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 193
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377944410825618038, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1376380152, guid: 8d1d247d19e30df4ea456cd4b645775c, type: 3}
     - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: currentMoneyText
       value: 
@@ -4115,20 +4103,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 164943722}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5955492229122283052, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 543018133874765889, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 6070701188904587636, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 3820209099496285345, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 105437489253428573, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 3526833174320537866, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 6651105919195402492, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 7545731442405977178, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 772078820027727073, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 7501011490676252137, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 6605528542418048109, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 7691185484292354792, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
-    - {fileID: 4443146489809402677, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
@@ -4407,6 +4382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5427610729974313259, guid: cdadef3303ff3b245abba74e8330737f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a88064a08fd9c6438f5cc0cd89501d5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
