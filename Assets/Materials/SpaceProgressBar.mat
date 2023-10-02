@@ -81,7 +81,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HealthAmout: -0.000140115
+    - _HealthAmout: -0.00006683057
     - _Metallic: 0
     - _Mode: 0
     - _NumberOfPixel: 15
