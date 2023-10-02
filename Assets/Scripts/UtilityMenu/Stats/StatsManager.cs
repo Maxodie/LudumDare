@@ -15,14 +15,21 @@ public class StatsManager : MonoBehaviour {
 
        // transform.GetChil
 
-        statsText.text += "Space Bar Time <b>" + playerStats.miningMaxTime.GetBaseValue() + "(<color=#4DEA52>" + playerStats.miningMaxTime.GetTotalModifierValue() + "</color>)s</b><sprite=6>\n";
-        statsText.text += "";
+        statsText.text += "<size=36>Space Bar Time : <b>" + playerStats.miningMaxTime.value + 
+        "s</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningMaxTime.GetTotalValueByType(ModifierType.ADDITION) +
+        "</color>), (<color=#4DEA52>+" + playerStats.miningMaxTime.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=6></size>\n";
 
-        statsText.text += "Mining Rate <b>" + playerStats.miningpower.GetBaseValue() + "(<color=#4DEA52>" + playerStats.miningpower.GetTotalModifierValue() + "</color>)</b><sprite=5>\n";
+        statsText.text += "<size=36>Mining Power : <b>" + playerStats.miningpower.value + 
+        "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningpower.GetTotalValueByType(ModifierType.ADDITION) + 
+        "</color>), (<color=#4DEA52>+" + playerStats.miningpower.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=5></size>\n";
 
-        statsText.text += "Mining Power <b>" + playerStats.miningRate.GetBaseValue() + "(<color=#4DEA52>" + playerStats.miningRate.GetTotalModifierValue() + "</color>)</b><sprite=4>\n";
-        
-        statsText.text += "Ore Per Drop <b>" + playerStats.miningOreReceived.GetBaseValue() + "(<color=#4DEA52>" + playerStats.miningOreReceived.GetTotalModifierValue() + "</color>)</b><sprite=9>\n";
+        statsText.text += "<size=36>Mining Power : <b>" + playerStats.miningRate.value + 
+        "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningRate.GetTotalValueByType(ModifierType.ADDITION) + 
+        "</color>), (<color=#4DEA52>+" + playerStats.miningRate.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=4></size>\n";
+
+        statsText.text += "<size=36>Minerals Per Drop : <b>" + playerStats.miningOreReceived.value + 
+        "</size>\n<size=25>Details : (<color=#4DEA52>+" + playerStats.miningOreReceived.GetTotalValueByType(ModifierType.ADDITION) + 
+        "</color>), (<color=#4DEA52>+" + playerStats.miningOreReceived.GetTotalValueByType(ModifierType.ADD_PERCENTAGE) + "%</color>)</b><sprite=9></size>\n";
 
     }
 }

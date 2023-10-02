@@ -57,7 +57,7 @@ public class ShopManager : MonoBehaviour {
             result += "Mining Power <b><color=#4DEA52>" + (shopItem.miningpowerPercentAdd*100).ToString("+#;-#;0") + "%</color></b><sprite=5>\n";
 
         if(shopItem.miningOreReceivedPercentAdd != 0)
-            result += "Ore Per Drop <b><color=#4DEA52>" + (shopItem.miningOreReceivedPercentAdd*100).ToString("+#;-#;0") + "%</color></b><sprite=>\n";
+            result += "Minerals Per Drop <b><color=#4DEA52>" + (shopItem.miningOreReceivedPercentAdd*100).ToString("+#;-#;0") + "%</color></b><sprite=>\n";
 
         return result;
     }
