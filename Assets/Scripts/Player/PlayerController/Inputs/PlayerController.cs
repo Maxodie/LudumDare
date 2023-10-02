@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float distanceToMine = 2f;
 
-    GameObject targetedObject;
+    public GameObject targetedObject;
 
     float spaceBarTimer;
 

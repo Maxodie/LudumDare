@@ -3,8 +3,10 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     public Animator animator;
+    public PlayerController controller;
 
-    [SerializeField] ParticleSystem particle;
+    [SerializeField] ParticleSystem breakingParticle;
+    [SerializeField] ParticleSystem deathParticle;
 
     public float timeBetweenEachAnim = 10f;
 
@@ -37,13 +39,20 @@ public class PlayerAnimationController : MonoBehaviour
             timer = 0f;
         }
 
-        animator.SetFloat("MiningSpeed", 1 + PlayerStats.instance.miningRate.value);
+        if (controller.targetedObject != null)
+            animator.SetFloat("MiningSpeed", 1 + (60 * PlayerStats.instance.miningRate.value /controller.targetedObject.GetComponent<ObjectData>().objectData.hardness));
     }
 
     public void ActiveBreakingParticules()
     {
         if (PlayerController.instance.iscurrentlymining)
-            particle.Play();
+            breakingParticle.Play();
+    }
+
+    public void ActiveDeathParticules()
+    {
+        if (PlayerController.instance.iscurrentlymining)
+            deathParticle.Play();
     }
 
     public void DoIdleAnim()
