@@ -37,35 +37,35 @@ public class OresGeneration : MonoBehaviour
         // IDictionary<oreDataBaseId, rarityWeight>
         IDictionary<int, int> oreRarityWeightDictionary = new Dictionary<int, int>();
         int totalRarityWeight = 0;
-        int playerDepth = PlayerStats.instance.depth;
+        //int playerDepth = PlayerStats.instance.depth;
 
         for (int i = 0; i < oreDataBase.oreList.Length; i++)
         {
             Ore selectedOre = oreDataBase.oreList[i];
             float temporaryRarityWeight = 0;
             
-            if (playerDepth >= selectedOre.depthMin && playerDepth <= selectedOre.depthMax)
+            if (PlayerStats.instance.depth >= selectedOre.depthMin && PlayerStats.instance.depth <= selectedOre.depthMax)
             {
                 int depthMid = (selectedOre.depthMin + selectedOre.depthMax) / 2;
 
-                if (playerDepth == depthMid)
+                if (PlayerStats.instance.depth == depthMid)
                 {
                     oreRarityWeightDictionary.Add(i, selectedOre.rarityWeight);
                     totalRarityWeight += selectedOre.rarityWeight;
                     continue;
                 }
-                else if (playerDepth < depthMid)
+                else if (PlayerStats.instance.depth < depthMid)
                 {
                     temporaryRarityWeight = selectedOre.rarityWeight *
-                                                ((playerDepth - selectedOre.depthMin) /
+                                                ((PlayerStats.instance.depth - selectedOre.depthMin) /
                                                  (float)(depthMid - selectedOre.depthMin));
 
                     if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
                 }
-                else if (playerDepth > depthMid)
+                else if (PlayerStats.instance.depth > depthMid)
                 {
                     temporaryRarityWeight = selectedOre.rarityWeight *
-                                            ((playerDepth - depthMid) /
+                                            ((PlayerStats.instance.depth - depthMid) /
                                              (float)(selectedOre.depthMax - depthMid));
                     
                     if (temporaryRarityWeight < 1) temporaryRarityWeight = 1;
