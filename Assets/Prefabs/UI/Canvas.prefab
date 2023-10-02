@@ -854,7 +854,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 4171305194207556924}
   craftUISpanwnPoint: {fileID: 6650906757919509596}
   craftUIPrefab: {fileID: 931222466391981398, guid: 51ea5db9f46092042b4a3fd02bdeeb19, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 5815790074162223087}
 --- !u!1 &2331710614615620263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2034,7 @@ RectTransform:
   - {fileID: 1488000724608461287}
   - {fileID: 4126553526285407528}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
