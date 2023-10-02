@@ -73,6 +73,17 @@ public class CharacterStat {
     public float GetTotalModifierValue() {
         return value - baseValue;
     }
+
+    public float GetTotalValueByType(ModifierType mod) {
+        float result = 0f;
+
+        foreach(Modifier modifier in modifiers) {
+            if(modifier.modifierType == mod)
+                result += modifier.value;
+        }
+
+        return result;
+    }
 }
 
 //Used to sort modifiers list to have the addition modifier in first and AddPercentage modifier in second

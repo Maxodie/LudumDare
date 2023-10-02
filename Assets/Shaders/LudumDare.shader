@@ -10,7 +10,6 @@ Shader"Unlit/NewUnlitShader"
         _BackgroundTex ("background Color",2D) = "white" {}
         _Sprite ("Sprite", 2D) = "white" {}
         _HealthAmout ("Health",range(0,1)) = 0
-        _NumberOfPixel ("Number of Pixel",int) = 0
         _YOffset ("YOffset",range(0,.5)) = 0
         _XOffset ("XOffset",range(0,.5)) = 0
         _SpeedOfShaking("Speed of Shaking",float) = 0
@@ -36,7 +35,6 @@ Shader"Unlit/NewUnlitShader"
             sampler2D _BackgroundTex;
             sampler2D _Sprite;
             float _HealthAmout;
-            int _NumberOfPixel;
             float _YOffset;
             float _XOffset;
             float _SpeedOfShaking;
@@ -71,7 +69,7 @@ Shader"Unlit/NewUnlitShader"
             float4 frag (Interpolator i) : SV_Target
             {
                 float4 col = lerp(_StartColor,_EndColor, _HealthAmout);
-                float a = floor(_HealthAmout*_NumberOfPixel)/_NumberOfPixel;
+                float a = _HealthAmout;
                 
                 a = (a > i.uv);
 
