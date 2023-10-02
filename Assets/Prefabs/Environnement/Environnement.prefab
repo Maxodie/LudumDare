@@ -187,7 +187,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 32, y: 4}
+  m_Size: {x: 32, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -273,7 +273,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 32, y: 4}
+  m_Size: {x: 32, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -341,31 +341,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Vertices.Array.size
-      value: 155
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.size
-      value: 462
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.06254959
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.031750202
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 9.42735
+      value: 0.9985302
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 9.45355
+      value: 0.99853027
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.data[241]
@@ -1619,31 +1619,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Vertices.Array.size
-      value: 155
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.size
-      value: 462
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.07300043
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.03314972
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 9.4321995
+      value: 0.9985302
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 9.45195
+      value: 0.99853027
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.data[82]
@@ -2899,6 +2899,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6438204353276926378}
     m_Modifications:
+    - target: {fileID: 6850724495630827829, guid: 4596d62e2f786d24ab54b972f7d2ecf6, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8313649468592050840, guid: 4596d62e2f786d24ab54b972f7d2ecf6, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3019,31 +3023,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Vertices.Array.size
-      value: 154
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.size
-      value: 459
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.07314968
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.03000021
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 9.43285
+      value: 0.9985302
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 9.4435005
+      value: 0.99853027
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.data[82]
@@ -7653,31 +7657,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Intensity
-      value: 0.7
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Vertices.Array.size
-      value: 155
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.size
-      value: 462
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.06774998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.03334999
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 9.43275
+      value: 0.9985302
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 9.44645
+      value: 0.99853027
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.data[82]
@@ -7818,6 +7822,10 @@ PrefabInstance:
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Triangles.Array.data[460]
       value: 154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7763228126087773043, guid: 989712aa9a17b63408afd085ca175d2b, type: 3}
       propertyPath: m_Vertices.Array.data[16].position.x
