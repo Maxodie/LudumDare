@@ -932,9 +932,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isMining
     m_EventTreshold: 0
-  - m_ConditionMode: 7
-    m_ConditionEvent: indexIdle
-    m_EventTreshold: 2
   - m_ConditionMode: 2
     m_ConditionEvent: IsDeath
     m_EventTreshold: 0
