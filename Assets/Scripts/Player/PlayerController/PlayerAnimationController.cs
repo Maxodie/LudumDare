@@ -5,6 +5,9 @@ public class PlayerAnimationController : MonoBehaviour
     public Animator animator;
     public PlayerController controller;
 
+    [SerializeField] GameObject tombPrefab;
+    GameObject tomb;
+
     [SerializeField] ParticleSystem breakingParticle;
     [SerializeField] ParticleSystem deathParticle;
 
@@ -69,7 +72,7 @@ public class PlayerAnimationController : MonoBehaviour
         else
             animator.SetInteger("indexIdle", 3);
 
-        animator.SetInteger("indexIdle", 2);
+
         animator.SetTrigger("StartIdle");
 
     }
@@ -77,5 +80,12 @@ public class PlayerAnimationController : MonoBehaviour
     public void OnDeath() {
         animator.SetBool("IsDeath", true);
         animator.SetBool("isMining", false);
+    }
+
+    public void PlaceTomb()
+    {
+        if (tomb == null)
+            tomb = Instantiate(tombPrefab);
+        tomb.transform.position = new Vector3(transform.position.x, tomb.transform.position.y);
     }
 }
