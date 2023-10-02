@@ -3335,6 +3335,10 @@ PrefabInstance:
       propertyPath: m_FrontSortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1648260051034413960, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2151992958258783451, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -3383,6 +3387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3256614010086331603, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b534659c0a26ff5438c4049fc3a8b0ef, type: 2}
     - target: {fileID: 4207739106794488062, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -3390,6 +3398,14 @@ PrefabInstance:
     - target: {fileID: 4207739106794488062, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: m_SortingLayerID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591495437934892459, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591495437934892459, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
+      propertyPath: EmissionModule.rateOverTime.minScalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8321123115386770672, guid: 1088223cd8afdd04ab70ae3c23bbf626, type: 3}
       propertyPath: currentMoneyText
