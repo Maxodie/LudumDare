@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
@@ -9,9 +10,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField] Vector2 startFadeOffset;
     public Vector2 endFadeOffset;
 
+    [SerializeField] AudioMixer audioMixer;
+
     void Awake() {
         if(!instance) instance = this;
         else Destroy(gameObject);
+
+        audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
+        audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+        audioMixer.SetFloat("EffectsVolume", PlayerPrefs.GetFloat("EffectsVolume"));
     }
 
     void Start() {
