@@ -21,10 +21,12 @@ MonoBehaviour:
   itemGived: {fileID: 0}
   itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
-  miningRateUpgradeboostAdd: 0
-  miningpowerBoostAdd: 0
+  miningRateUpgradeboostAdd: 0.1
+  miningpowerBoostAdd: 1
   miningOreReceivedBoostAdd: 0
+  walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 0

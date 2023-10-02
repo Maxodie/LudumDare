@@ -17,14 +17,16 @@ MonoBehaviour:
   itemName: Copper Pickaxe
   itemIcon: {fileID: 21300000, guid: 39a32064176492d499831ef784a8025c, type: 3}
   cost: 1
-  nextUpgrade: {fileID: 0}
+  nextUpgrade: {fileID: 11400000, guid: 2ecfb5867a6889446823d45c38cef0d3, type: 2}
   itemGived: {fileID: 0}
   itemGivedNumber: 0
   miningMaxTimeUpgradeboostAdd: 0
-  miningRateUpgradeboostAdd: 0
-  miningpowerBoostAdd: 0
+  miningRateUpgradeboostAdd: 0.1
+  miningpowerBoostAdd: 1
   miningOreReceivedBoostAdd: 0
+  walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0
   miningpowerPercentAdd: 0
   miningOreReceivedPercentAdd: 0
+  walkSpeedPercentAdd: 0

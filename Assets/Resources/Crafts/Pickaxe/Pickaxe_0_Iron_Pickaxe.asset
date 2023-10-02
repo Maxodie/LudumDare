@@ -19,9 +19,5 @@ MonoBehaviour:
   oreGivedNumber: 1
   craftVisual: {fileID: 21300000, guid: c4cfba33332601640a21f0fc5b67d6b1, type: 3}
   equipementType: 1
-  craftRequiredItems:
-  - requiredOre: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
-    requiredNumber: 5
-  - requiredOre: {fileID: 11400000, guid: 596e7625a4e1c1b42b4baa771b6a2caa, type: 2}
-    requiredNumber: 2
+  craftRequiredItems: []
   nextcraft: {fileID: 11400000, guid: 982821ebd9f0d2b4186cd3d0f3d872bf, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: 
   defaultDescription: 
   emoteId: 4
-  price: 30
+  price: 50
   sprites:
   - {fileID: 21300000, guid: 8cb8c7b79a7e3e147945eb5921a4d2e5, type: 3}
   - {fileID: 21300000, guid: 1c6ffbb6ade8ce647a6aa165033714ec, type: 3}
