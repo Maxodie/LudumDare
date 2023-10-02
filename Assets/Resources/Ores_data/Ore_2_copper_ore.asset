@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2a31cd9764829224dacb2d6c7573d664, type: 3}
   damagedCorner: {fileID: 21300000, guid: da7c33e4d2ce598409d14251052284c2, type: 3}
   damagedBorder: {fileID: 21300000, guid: 8c879253f6843ec40a7f0fbfb6a5d2b9, type: 3}
-  hardness: 40
+  hardness: 7
   rarityWeight: 7
-  depthMin: 40
-  depthMax: 90
+  depthMin: 15
+  depthMax: 60
