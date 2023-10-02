@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b39afc82b4a2a8e4a8439c64daddc6c4
+guid: 4cd274216af705c44ba9aa436d10f881
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oreIcons_0
+      name: plateIcons_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ba6f3d2c66b0b41a8e2817da486872
-      internalID: -1329705878
+      spriteID: e7c4962fdbdeddf4db0bb42e8bb30ed7
+      internalID: 168510978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oreIcons_1
+      name: plateIcons_1
       rect:
         serializedVersion: 2
         x: 16
@@ -154,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f6efeddc06fbf4196d0ff72a8783b5
-      internalID: 1579877565
+      spriteID: b50b78402c3e3be418ffebe62c1242a3
+      internalID: 262945818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oreIcons_2
+      name: plateIcons_2
       rect:
         serializedVersion: 2
         x: 32
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b9a4b1671aa2f4bb11c726a5a65b78
-      internalID: 293861317
+      spriteID: 77931a4a9b9b7e143bb15340338dcfa7
+      internalID: -677768618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oreIcons_3
+      name: plateIcons_3
       rect:
         serializedVersion: 2
         x: 48
@@ -196,29 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19963bbf5afea644580428b79bb0be4c
-      internalID: -1401781056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oreIcons_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 844517183c9f28643804cf1973aa9369
-      internalID: 1649707083
+      spriteID: 8229371c3e5ab7e4a90ef61c9db8b61b
+      internalID: -925014232
       vertices: []
       indices: 
       edges: []
@@ -234,11 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      oreIcons_0: -1329705878
-      oreIcons_1: 1579877565
-      oreIcons_2: 293861317
-      oreIcons_3: -1401781056
-      oreIcons_4: 1649707083
+      plateIcons_0: 168510978
+      plateIcons_1: 262945818
+      plateIcons_2: -677768618
+      plateIcons_3: -925014232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

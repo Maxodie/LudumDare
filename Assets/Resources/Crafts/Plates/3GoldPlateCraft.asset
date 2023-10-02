@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: copperPlate
+  m_Name: 3GoldPlateCraft
   m_EditorClassIdentifier: 
   isSpawnAtStart: 1
   isCraftGiveEquipedItem: 0
   itemGived: {fileID: 0}
-  oreGived: {fileID: 11400000, guid: 9790d329b185b8b4e8ffa9803972bab1, type: 2}
-  oreGivedNumber: 5
-  craftVisual: {fileID: 21300000, guid: b86d0db9457f24011888218122cc164a, type: 3}
-  equipementType: 1
+  oreGived: {fileID: 11400000, guid: e506c3502dcd5f843a17bfdf72f47ee0, type: 2}
+  oreGivedNumber: 1
+  craftVisual: {fileID: 21300000, guid: 86c0fab2076434a43a42f398a478e3f2, type: 3}
+  equipementType: 5
   craftRequiredItems:
-  - requiredOre: {fileID: 11400000, guid: 9c4e9a539c1aa52489fde38b302710c9, type: 2}
-    requiredNumber: 5
+  - requiredOre: {fileID: 11400000, guid: 73a267075457fda41a6af2966c6be6a7, type: 2}
+    requiredNumber: 2
   nextcraft: {fileID: 11400000}

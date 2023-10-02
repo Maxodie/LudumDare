@@ -30,4 +30,5 @@ public enum EquipmentType {
     BREARD = 2,
     PANTS = 3,
     FACE = 4,
+    ITEM = 5,
 }
