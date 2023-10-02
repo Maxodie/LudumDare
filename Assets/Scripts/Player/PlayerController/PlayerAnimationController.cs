@@ -43,7 +43,7 @@ public class PlayerAnimationController : MonoBehaviour
         }
 
         if (controller.targetedObject != null)
-            animator.SetFloat("MiningSpeed", 1 + (60 * PlayerStats.instance.miningRate.value /controller.targetedObject.GetComponent<ObjectData>().objectData.hardness));
+            animator.SetFloat("MiningSpeed", PlayerStats.instance.miningRate.value);
     }
 
     public void ActiveBreakingParticules()

@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
             }
 
             miningState.remainingDurability -= (int)PlayerStats.instance.miningpower.value;
-            yield return new WaitForSeconds(PlayerStats.instance.miningRate.value);
+            yield return new WaitForSeconds(1 / PlayerStats.instance.miningRate.value);
 
             if (!isMining)
             {
