@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: Pickaxe_3_Gold_Pickaxe
+  m_Name: Pickaxe_4_Gold_Pickaxe
   m_EditorClassIdentifier: 
   isSpawnAtStart: 0
   isCraftGiveEquipedItem: 1
@@ -19,5 +19,11 @@ MonoBehaviour:
   oreGivedNumber: 1
   craftVisual: {fileID: 21300000, guid: 379719d66c4d2544085bf684ab3b15d7, type: 3}
   equipementType: 1
-  craftRequiredItems: []
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
+    requiredNumber: 15
+  - requiredOre: {fileID: 11400000, guid: e506c3502dcd5f843a17bfdf72f47ee0, type: 2}
+    requiredNumber: 2
+  - requiredOre: {fileID: 11400000, guid: 596e7625a4e1c1b42b4baa771b6a2caa, type: 2}
+    requiredNumber: 20
   nextcraft: {fileID: 0}

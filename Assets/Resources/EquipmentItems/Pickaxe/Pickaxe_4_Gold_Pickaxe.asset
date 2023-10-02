@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a996aaa005c84b48b7a8f091706e143, type: 3}
-  m_Name: Pickaxe_3_Gold_Pickaxe
+  m_Name: Pickaxe_4_Gold_Pickaxe
   m_EditorClassIdentifier: 
   isBoost: 1
   isSpawnAtStart: 0

@@ -15,5 +15,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 80c2e6091384a7a4db85c474bc71e9bc, type: 3}
   itemName: Iron Plate
   defaultDescription: this iron plate is used in other crafts
-  emoteId: 0
+  emoteId: 5
   price: 6

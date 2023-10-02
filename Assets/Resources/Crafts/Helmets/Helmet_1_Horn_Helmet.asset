@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
+  m_Name: Helmet_1_Horn_Helmet
+  m_EditorClassIdentifier: 
+  isSpawnAtStart: 0
+  isCraftGiveEquipedItem: 1
+  itemGived: {fileID: 11400000, guid: 1f0a8ba62215b4344bbebc55e42bb017, type: 2}
+  oreGived: {fileID: 0}
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: 56a5dceff91faeb429a117bd213d40d4, type: 3}
+  equipementType: 0
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 4367a0149413b17449214e1f877b87d5, type: 2}
+    requiredNumber: 3
+  - requiredOre: {fileID: 11400000, guid: 3bc92b34a58a5c74587d1a631aa0506a, type: 2}
+    requiredNumber: 2
+  - requiredOre: {fileID: 11400000, guid: 3c0f89ab8fbb7954092f57d4a0f0ac07, type: 2}
+    requiredNumber: 30
+  nextcraft: {fileID: 11400000, guid: d3968ea9a7f01824d95df9f17183ff75, type: 2}

@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1eb37915fc1b4580c23fbe9355c20, type: 3}
-  m_Name: Pickaxe_2_Silver_Pickaxe
+  m_Name: Pickaxe_0_Stone_Pickaxe
   m_EditorClassIdentifier: 
-  isSpawnAtStart: 0
+  isSpawnAtStart: 1
   isCraftGiveEquipedItem: 1
-  itemGived: {fileID: 11400000, guid: 2ecfb5867a6889446823d45c38cef0d3, type: 2}
+  itemGived: {fileID: 11400000, guid: 036e3fec366f1f7408102cc838b14b64, type: 2}
   oreGived: {fileID: 0}
-  oreGivedNumber: 1
-  craftVisual: {fileID: 21300000, guid: 75adda04e58591d4881e41d80c31019c, type: 3}
+  oreGivedNumber: 0
+  craftVisual: {fileID: 21300000, guid: 5e70e1c28803b76439bbd6688303639c, type: 3}
   equipementType: 1
-  craftRequiredItems: []
-  nextcraft: {fileID: 11400000, guid: f1462e2bd37970541b0a5f5569ae7841, type: 2}
+  craftRequiredItems:
+  - requiredOre: {fileID: 11400000, guid: 3c0f89ab8fbb7954092f57d4a0f0ac07, type: 2}
+    requiredNumber: 10
+  nextcraft: {fileID: 11400000, guid: f143a73ca6f930948be6d1ae340cbd45, type: 2}
