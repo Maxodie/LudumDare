@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
-  m_Name: gold_ore
+  m_Name: 4gold_ore
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 1866552103042f94c939541d1b46f6ed, type: 3}
   itemName: 
   defaultDescription: 
-  emoteId: 0
+  emoteId: 4
   price: 30
   sprites:
   - {fileID: 21300000, guid: a405b1fb14d64a747aa9c0c55bbef189, type: 3}

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5368f5f36943cc41bc365f41485dc2e, type: 3}
-  m_Name: iron_ore
+  m_Name: 1iron_ore
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: ce75ee2575330404086ee0775f43ab89, type: 3}
   itemName: 
   defaultDescription: 
-  emoteId: 0
+  emoteId: 1
   price: 10
   sprites:
   - {fileID: 21300000, guid: 32a1d39c9d385c245987840bf5b7fb2e, type: 3}
