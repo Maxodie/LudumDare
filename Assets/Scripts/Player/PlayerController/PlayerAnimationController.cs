@@ -18,6 +18,16 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void ResetAnim() {
         animator.SetBool("IsDeath", false);
+        animator.SetTrigger("Spawn");
+    }
+
+    //Called in death annimation
+    public void FadeInEndScreen() {
+        CircleWipeController.instance.FadeOut();
+    }
+
+    public void ReactivePlayMode() {
+        PlayerController.instance.canPlay = true;
     }
 
     void Update() {
@@ -27,6 +37,8 @@ public class PlayerAnimationController : MonoBehaviour
             DoIdleAnim();
             timer = 0f;
         }
+
+        animator.SetFloat("MiningSpeed", 1 + PlayerStats.instance.miningRate.value);
     }
 
     public void ActiveBreakingParticules()
@@ -54,5 +66,6 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void OnDeath() {
         animator.SetBool("IsDeath", true);
+        animator.SetBool("isMining", false);
     }
 }

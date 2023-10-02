@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public class CircleWipeController : MonoBehaviour
 {
+    public static CircleWipeController instance;
+
     private const float RADIUS = 2f;
 
     public Shader shader;
@@ -33,9 +35,10 @@ public class CircleWipeController : MonoBehaviour
 
     void Awake()
     {
-        UpdateShader();
+        if(!instance) instance = this;
+        else Destroy(gameObject);
 
-        FadeIn();
+        UpdateShader();
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

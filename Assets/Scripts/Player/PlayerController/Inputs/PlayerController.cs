@@ -14,12 +14,13 @@ public class PlayerController : MonoBehaviour
     public Transform raycastOrigin;
     Vector2 startPos;
 
-    public bool isMining;
-    public bool iscurrentlymining;
+    [HideInInspector] public bool isMining;
+    [HideInInspector] public bool canPlay;
+    [HideInInspector] public bool iscurrentlymining;
 
     [SerializeField] float distanceToMine = 2f;
 
-    public GameObject targetedObject;
+    GameObject targetedObject;
 
     float spaceBarTimer;
 
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPlayer()
     {
+        canPlay = false;
         spaceBarTimer = PlayerStats.instance.miningMaxTime.value;
         PlayerStats.instance.depth = 0;
         transform.position = startPos;
@@ -70,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void MiningControl() {
-        if (isMining)
+        if (isMining && canPlay)
         {
             if (spaceBarTimer > 0f)
             {
