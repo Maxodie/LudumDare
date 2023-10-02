@@ -33,16 +33,9 @@ public class CircleWipeController : MonoBehaviour
 
     void Awake()
     {
-        material = new Material(shader);
         UpdateShader();
 
         FadeIn();
-    }
-
-    void OnValidate()
-    {
-        material = material == null ? new Material(shader) : material;
-        UpdateShader();
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
