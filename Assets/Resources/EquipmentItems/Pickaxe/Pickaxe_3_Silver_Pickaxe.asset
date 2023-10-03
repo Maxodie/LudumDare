@@ -23,7 +23,7 @@ MonoBehaviour:
   miningMaxTimeUpgradeboostAdd: 0
   miningRateUpgradeboostAdd: 0
   miningpowerBoostAdd: 1
-  miningOreReceivedBoostAdd: 0
+  miningOreReceivedBoostAdd: 1
   walkSpeedBoostAdd: 0
   miningMaxTimeUpgradePercentAdd: 0
   miningRateUpgradePercentAdd: 0

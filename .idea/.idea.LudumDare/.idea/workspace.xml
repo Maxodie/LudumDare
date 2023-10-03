@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c2a3c66-8813-476b-bb27-050e85e2a281" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Particle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Particle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/UI/oreIcons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/UI/oreIcons.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Shader Graphs_CircleWipe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Shader Graphs_CircleWipe.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/SpaceProgressBar.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/SpaceProgressBar.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugin/TextMesh Pro/Resources/Sprite Assets/oreIcons.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugin/TextMesh Pro/Resources/Sprite Assets/oreIcons.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/CraftDataBase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/CraftDataBase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Helmets/Helmet_0_lightHelmet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Helmets/Helmet_0_lightHelmet.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_0_Iron_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_0_Iron_Pickaxe.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_1_Copper_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_1_Copper_Pickaxe.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_2_Silver_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_2_Silver_Pickaxe.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_3_Gold_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Pickaxe/Pickaxe_3_Gold_Pickaxe.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Helmet_1_lightHelmet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Helmet_1_lightHelmet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_0_Iron_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_0_Iron_Pickaxe.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_1_Copper_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_1_Copper_Pickaxe.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_0_IronPlateCraft.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_0_IronPlateCraft.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_1_CopperPlateCraft.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_1_CopperPlateCraft.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_2_SilverPlateCraft.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_2_SilverPlateCraft.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_3_GoldPlateCraft.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Crafts/Plates/Plate_3_GoldPlateCraft.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_2_Silver_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_2_Silver_Pickaxe.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_3_Gold_Pickaxe.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EquipmentItems/Pickaxe/Pickaxe_3_Gold_Pickaxe.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_0_stone.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_0_stone.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_1_iron_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_1_iron_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_2_copper_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_2_copper_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_3_silver_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_3_silver_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_4_gold_ore.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Ores_data/Ore_4_gold_ore.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ShopItems/Stick.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ShopItems/Stick.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_0_IronPlate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_0_IronPlate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_1_CopperPlate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_1_CopperPlate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_2_SilverPlate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_2_SilverPlate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_3_GoldPlate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Plate/Plate_3_GoldPlate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Stick.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventorySpeItems/Stick.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maxodie 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maxodie 2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +113,7 @@
       <updated>1696031985816</updated>
       <workItem from="1696031993933" duration="1866000" />
       <workItem from="1696150843360" duration="19216000" />
-      <workItem from="1696259705122" duration="2601000" />
+      <workItem from="1696259705122" duration="3792000" />
     </task>
     <servers />
   </component>
