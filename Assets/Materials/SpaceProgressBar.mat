@@ -81,7 +81,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+<<<<<<< Updated upstream
     - _HealthAmout: -0.00087254756
+=======
+    - _HealthAmout: -0.00043358156
+>>>>>>> Stashed changes
     - _Metallic: 0
     - _Mode: 0
     - _NumberOfPixel: 15

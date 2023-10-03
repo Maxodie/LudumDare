@@ -238,8 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 1876b2f0de078e54dbc986e06bb93e0f
       internalID: 1072412431
+=======
+      spriteID: 50e1902bc2f8d454bbacf51f64fd3bb1
+      internalID: 5958604
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -259,8 +264,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: a57970a63c6a5be46bfffdd0d682cd65
       internalID: 518939842
+=======
+      spriteID: 08ecfbd40102632428745f464b02afbd
+      internalID: 972144926
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -280,8 +290,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 0cf12e1982bfa4a49968ad275262827b
       internalID: 1624905656
+=======
+      spriteID: 0548788715d632f4399085c849cad015
+      internalID: -896747182
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -301,8 +316,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: fd32207a5a9fb0d42904e1cdad7e0570
       internalID: 1892614566
+=======
+      spriteID: 3c2b5f997ac3d4a49916c565ba274fdc
+      internalID: 1546380462
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -322,8 +342,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 8817138a51ddfb84db1d43d7dea3ff7a
       internalID: 1256018553
+=======
+      spriteID: 9e397a2381634e9489e5d5ac2cbd879f
+      internalID: 722853759
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -344,11 +369,19 @@ TextureImporter:
       oreIcons_2: 293861317
       oreIcons_3: -1401781056
       oreIcons_4: 1649707083
+<<<<<<< Updated upstream
       oreIcons_5: 1072412431
       oreIcons_6: 518939842
       oreIcons_7: 1624905656
       oreIcons_8: 1892614566
       oreIcons_9: 1256018553
+=======
+      oreIcons_5: 5958604
+      oreIcons_6: 972144926
+      oreIcons_7: -896747182
+      oreIcons_8: 1546380462
+      oreIcons_9: 722853759
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
