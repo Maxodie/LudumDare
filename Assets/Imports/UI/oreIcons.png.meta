@@ -134,7 +134,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 86ba6f3d2c66b0b41a8e2817da486872
-      internalID: -1329705878
+      internalID: -8865584855825397105
       vertices: []
       indices: 
       edges: []
@@ -155,7 +155,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b7f6efeddc06fbf4196d0ff72a8783b5
-      internalID: 1579877565
+      internalID: 7413637277666762988
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e6b9a4b1671aa2f4bb11c726a5a65b78
-      internalID: 293861317
+      internalID: 4015629783322603266
       vertices: []
       indices: 
       edges: []
@@ -197,7 +197,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 19963bbf5afea644580428b79bb0be4c
-      internalID: -1401781056
+      internalID: -7445186603936992896
       vertices: []
       indices: 
       edges: []
@@ -218,7 +218,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 844517183c9f28643804cf1973aa9369
-      internalID: 1649707083
+      internalID: -6492489844203405278
       vertices: []
       indices: 
       edges: []
@@ -238,117 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< Updated upstream
-      spriteID: 1876b2f0de078e54dbc986e06bb93e0f
-      internalID: 1072412431
-=======
-      spriteID: 50e1902bc2f8d454bbacf51f64fd3bb1
-      internalID: 5958604
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oreIcons_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: a57970a63c6a5be46bfffdd0d682cd65
-      internalID: 518939842
-=======
-      spriteID: 08ecfbd40102632428745f464b02afbd
-      internalID: 972144926
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oreIcons_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: 0cf12e1982bfa4a49968ad275262827b
-      internalID: 1624905656
-=======
-      spriteID: 0548788715d632f4399085c849cad015
-      internalID: -896747182
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oreIcons_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: fd32207a5a9fb0d42904e1cdad7e0570
-      internalID: 1892614566
-=======
-      spriteID: 3c2b5f997ac3d4a49916c565ba274fdc
-      internalID: 1546380462
->>>>>>> Stashed changes
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oreIcons_9
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< Updated upstream
-      spriteID: 8817138a51ddfb84db1d43d7dea3ff7a
-      internalID: 1256018553
-=======
-      spriteID: 9e397a2381634e9489e5d5ac2cbd879f
-      internalID: 722853759
->>>>>>> Stashed changes
+      spriteID: 49d83c668efac0bd0800000000000000
+      internalID: -2662559866991440492
       vertices: []
       indices: 
       edges: []
@@ -356,7 +247,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -364,24 +255,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      oreIcons_0: -1329705878
-      oreIcons_1: 1579877565
-      oreIcons_2: 293861317
-      oreIcons_3: -1401781056
-      oreIcons_4: 1649707083
-<<<<<<< Updated upstream
-      oreIcons_5: 1072412431
-      oreIcons_6: 518939842
-      oreIcons_7: 1624905656
-      oreIcons_8: 1892614566
-      oreIcons_9: 1256018553
-=======
-      oreIcons_5: 5958604
-      oreIcons_6: 972144926
-      oreIcons_7: -896747182
-      oreIcons_8: 1546380462
-      oreIcons_9: 722853759
->>>>>>> Stashed changes
+      oreIcons_0: -8865584855825397105
+      oreIcons_1: 7413637277666762988
+      oreIcons_2: 4015629783322603266
+      oreIcons_3: -7445186603936992896
+      oreIcons_4: -6492489844203405278
+      oreIcons_5: -2662559866991440492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

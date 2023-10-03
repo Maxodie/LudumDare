@@ -196,11 +196,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< Updated upstream
-    sprite: {fileID: 1072412431, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
-=======
     sprite: {fileID: 5958604, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
->>>>>>> Stashed changes
   - m_Index: 6
     m_Metrics:
       m_Width: 16
@@ -216,11 +212,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< Updated upstream
-    sprite: {fileID: 518939842, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
-=======
     sprite: {fileID: 972144926, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
->>>>>>> Stashed changes
   - m_Index: 7
     m_Metrics:
       m_Width: 16
@@ -236,11 +228,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< Updated upstream
-    sprite: {fileID: 1624905656, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
-=======
     sprite: {fileID: -896747182, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
->>>>>>> Stashed changes
   - m_Index: 8
     m_Metrics:
       m_Width: 16
@@ -256,11 +244,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< Updated upstream
-    sprite: {fileID: 1892614566, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
-=======
     sprite: {fileID: 1546380462, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
->>>>>>> Stashed changes
   - m_Index: 9
     m_Metrics:
       m_Width: 16
@@ -276,11 +260,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-<<<<<<< Updated upstream
-    sprite: {fileID: 1256018553, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
-=======
     sprite: {fileID: 722853759, guid: b39afc82b4a2a8e4a8439c64daddc6c4, type: 3}
->>>>>>> Stashed changes
   spriteInfoList: []
   fallbackSpriteAssets:
   - {fileID: 0}
