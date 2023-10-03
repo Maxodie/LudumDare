@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
         if(!instance) instance = this;
         else Destroy(gameObject);
 
+        
         audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
         audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
         audioMixer.SetFloat("EffectsVolume", PlayerPrefs.GetFloat("EffectsVolume"));

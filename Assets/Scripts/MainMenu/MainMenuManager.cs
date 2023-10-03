@@ -11,6 +11,7 @@ public class MainMenuManager : MonoBehaviour {
     [SerializeField] GameObject optionPanel;
 
     void Start() {
+        optionPanel.SetActive(false);
         circleWipeController.FadeOut(startTransitionOffset);
 
         audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
